@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Lets us use dark: classes that respond to the .dark class on <html>
+   (controlled by the user's choice in Settings) instead of only the
+   browser/OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+}
