@@ -67,7 +67,7 @@ function checkPlaceholders(day, content) {
 }
 
 function checkSections(day, content) {
-  const required = ["watch", "grammar", "reading", "vocabulary", "writing", "speaking", "extra"];
+  const required = ["watch", "grammar", "reading", "vocabulary", "writing", "speaking", "listen"];
   for (const key of required) {
     if (content[key] === undefined || content[key] === null) {
       fail(`Day ${day}: missing section "${key}".`);

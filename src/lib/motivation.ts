@@ -137,13 +137,9 @@ const DONE_WELL_NOTES: Record<StepKey, { en: string; hi: string }> = {
     en: "You did today's warm-up — reviewing old mistakes is less exciting than new material, and you did it anyway.",
     hi: "आपने आज का वार्म-अप किया — पुरानी गलतियाँ दोहराना नए काम जैसा दिलचस्प नहीं होता, फिर भी आपने किया।",
   },
-  extra: {
-    en: "You did today's extra task. That's work most people on this plan would have skipped.",
-    hi: "आपने आज का एक्स्ट्रा टास्क किया। यह वह काम है जिसे ज़्यादातर लोग छोड़ देते।",
-  },
-  endOfDay: {
-    en: "You showed up today, start to finish.",
-    hi: "आप आज शुरू से आखिर तक टिके रहे।",
+  listen: {
+    en: "You finished today's Listening task and wrote about what you heard. Listening and writing together builds more than either one alone.",
+    hi: "आपने आज का लिसनिंग टास्क पूरा किया और जो सुना उसके बारे में लिखा। सुनना और लिखना साथ में अकेले से ज़्यादा फायदा करता है।",
   },
 };
 
@@ -152,27 +148,26 @@ const DONE_WELL_PRIORITY: StepKey[] = [
   "writing",
   "reading",
   "grammar",
+  "listen",
   "vocabulary",
   "watch",
   "warmup",
-  "extra",
 ];
 
-export function getDoneWellNote(progress: DailyProgress): { en: string; hi: string } {
+export function getDoneWellNote(progress: DailyProgress): { en: string; hi: string } | null {
   const fieldByStep: Record<StepKey, keyof DailyProgress> = {
     warmup: "warmupDone",
     watch: "watchDone",
     grammar: "grammarDone",
     reading: "readingDone",
     vocabulary: "vocabularyDone",
+    listen: "listenDone",
     writing: "writingDone",
     speaking: "speakingDone",
-    extra: "extraDone",
-    endOfDay: "endOfDayDone",
   };
 
   for (const step of DONE_WELL_PRIORITY) {
     if (progress[fieldByStep[step]]) return DONE_WELL_NOTES[step];
   }
-  return DONE_WELL_NOTES.endOfDay;
+  return null;
 }

@@ -1,0 +1,83 @@
+{
+  "day": 1,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "parts of speech in English grammar", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Parts of Speech (overview)",
+    "rule": "Every English word plays one of 8 roles in a sentence: noun, pronoun, verb, adjective, adverb, preposition, conjunction, or interjection. Knowing the role of a word helps you build correct sentences.",
+    "examples": [
+      "Ravi quickly finished his homework. (Ravi = noun, quickly = adverb, finished = verb, his = pronoun, homework = noun)",
+      "The small dog barked loudly near the gate. (small = adjective, dog = noun, barked = verb, loudly = adverb, near = preposition, gate = noun)",
+      "She is very happy today. (She = pronoun, is = verb, very = adverb, happy = adjective, today = adverb)"
+    ],
+    "odiaNote": "Odia usually follows Subject-Object-Verb order (the verb comes last), but English uses Subject-Verb-Object order. This is why Odia speakers often say things like 'I rice eat' instead of 'I eat rice.'",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Identify the part of speech of the underlined word: She sings beautifully.", "answer": "adverb", "explanation": "'Beautifully' describes how she sings - it modifies the verb 'sings', so it is an adverb." },
+      { "type": "fill-blank", "prompt": "Identify the part of speech of the underlined word: He bought a new car.", "answer": "noun", "explanation": "'Car' is the thing being bought - a person, place, or thing is a noun." },
+      { "type": "fill-blank", "prompt": "Identify the part of speech of the underlined word: They are playing cricket.", "answer": "pronoun", "explanation": "'They' stands in place of the names of the people playing, so it is a pronoun." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'I rice eat every day.'", "answer": "I eat rice every day.", "explanation": "English uses Subject-Verb-Object order. Odia often uses Subject-Object-Verb, which causes this exact mistake." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'She happy is.'", "answer": "She is happy.", "explanation": "The verb 'is' must come before the adjective 'happy' in English: Subject-Verb-Complement." },
+      { "type": "rewrite", "prompt": "Rewrite using a pronoun instead of repeating the noun: 'Ravi is reading. Ravi likes books.'", "answer": "Ravi is reading. He likes books.", "explanation": "'He' replaces 'Ravi' the second time so the sentence doesn't repeat the noun." },
+      { "type": "translate", "prompt": "Write this idea in correct English word order: subject 'I', verb 'go', object 'to school', time word 'daily'.", "answer": "I go to school daily.", "explanation": "English order is Subject + Verb + Object + time/place word: I (subject) go (verb) to school (object) daily (adverb)." },
+      { "type": "fill-blank", "prompt": "'Wow, that is amazing!' - what part of speech is 'Wow'?", "answer": "interjection", "explanation": "'Wow' expresses sudden feeling and stands alone outside the sentence's grammar - it is an interjection." }
+    ]
+  },
+  "reading": {
+    "passage": "Meera lives in a small town in Odisha. Every morning, she wakes up at six o'clock and helps her mother in the kitchen before going to school. Meera is a quiet student, but she is very hardworking. Her favourite subject is English, although she finds it difficult at times. Her teacher, Mr. Das, always tells the class that making mistakes is a normal part of learning any language. He says that students who are afraid of mistakes often learn more slowly than students who keep trying. Meera has started keeping a small notebook where she writes one new English word every day, along with its meaning in Odia. After one month, she noticed that she could understand simple English conversations much better than before. She still makes mistakes with articles like 'a' and 'the', but she no longer feels embarrassed about it. Meera's goal is to become confident enough to give a short speech in English by the end of the school year. Her parents are proud of her effort, even though they do not speak much English themselves.",
+    "wordCount": 196,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["A girl's daily chores at home", "A student's effort to improve her English", "A teacher's opinion about mistakes", "A town in Odisha"], "correctIndex": 1, "explanations": ["This is mentioned but it's not the main focus of the passage.", "Correct - the passage follows Meera's daily effort and progress in learning English.", "This is one supporting detail, not the main idea.", "The town is only the setting, not the topic."] },
+      { "type": "detail", "prompt": "What does Meera write in her notebook every day?", "options": ["Her homework", "A new English word and its Odia meaning", "A letter to her teacher", "Her daily schedule"], "correctIndex": 1, "explanations": ["The passage does not mention homework in the notebook.", "Correct - this is stated directly in the passage.", "There is no mention of letters.", "The schedule is not what she writes in the notebook."] },
+      { "type": "inference", "prompt": "What can you infer about Mr. Das's teaching style?", "options": ["He punishes students who make mistakes", "He encourages students not to fear mistakes", "He only teaches grammar rules", "He does not care about student progress"], "correctIndex": 1, "explanations": ["The passage says the opposite - he does not want students to be afraid of mistakes.", "Correct - he tells the class that fearing mistakes slows down learning.", "The passage doesn't say he focuses only on grammar.", "The passage suggests he does care, since he gives advice to help students."] },
+      { "type": "tone", "prompt": "What is the overall tone of the passage toward Meera's effort?", "options": ["Critical", "Encouraging and positive", "Humorous", "Angry"], "correctIndex": 1, "explanations": ["The passage does not criticize Meera.", "Correct - the passage presents her effort and progress in a positive, supportive way.", "There is no humour in the passage.", "There is no anger expressed anywhere."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'hardworking' means:", "options": ["Someone who works with hard objects", "Someone who puts in a lot of effort", "Someone who is often tired", "Someone who works only at night"], "correctIndex": 1, "explanations": ["This takes the word too literally; it's not about objects.", "Correct - 'hardworking' describes someone who makes a strong, steady effort.", "The passage does not say she is tired.", "There is no mention of night work."] }
+    ],
+    "summaryKeyPoints": [
+      "Meera is a student in Odisha who finds English difficult but works hard at it.",
+      "Her teacher tells the class that making mistakes is a normal part of learning.",
+      "Meera keeps a notebook and writes one new English word with its Odia meaning every day.",
+      "After a month of practice, she understands simple English conversation better.",
+      "Her goal is to give a short speech in English by the end of the school year."
+    ],
+    "modelSummary": "Meera, a student in Odisha, struggles with English but practices daily by writing one new word with its Odia meaning in a notebook. Her teacher reminds the class that mistakes are a normal part of learning. After a month, Meera's understanding of spoken English has improved, and she hopes to give a short English speech by the end of the school year."
+  },
+  "vocabulary": [
+    { "word": "arrive", "partOfSpeech": "verb", "meaningEnglish": "to reach a place", "meaningHindi": "पहुँचना", "meaningOdia": "ପହଞ୍ଚିବା", "rootOrTrick": "Think: 'a' + 'rive' (riverbank) - you arrive when you reach the bank/edge of your journey.", "examples": ["The train will arrive at 9 o'clock.", "She arrived late for the meeting."], "synonyms": ["reach", "come"], "antonyms": ["leave", "depart"] },
+    { "word": "decide", "partOfSpeech": "verb", "meaningEnglish": "to choose something after thinking", "meaningHindi": "निर्णय लेना", "meaningOdia": "ନିଷ୍ପତ୍ତି ନେବା", "rootOrTrick": "'De-' (off) + 'cide' (cut) - to decide is to 'cut off' other choices and pick one.", "examples": ["I decided to study grammar today.", "He could not decide which book to buy."], "synonyms": ["choose", "determine"], "antonyms": ["hesitate"] },
+    { "word": "improve", "partOfSpeech": "verb", "meaningEnglish": "to make or become better", "meaningHindi": "सुधार करना", "meaningOdia": "ଉନ୍ନତି କରିବା", "rootOrTrick": "Picture a graph line going up - that is 'improving.'", "examples": ["Her English has improved a lot this month.", "You should improve your handwriting."], "synonyms": ["progress", "upgrade"], "antonyms": ["worsen"] },
+    { "word": "honest", "partOfSpeech": "adjective", "meaningEnglish": "telling the truth, not lying", "meaningHindi": "ईमानदार", "meaningOdia": "ସଚ୍ଚୋଟ", "rootOrTrick": "An honest person has no 'hidden' lies - they show their true self.", "examples": ["Please give me an honest opinion.", "He is known as an honest officer."], "synonyms": ["truthful", "sincere"], "antonyms": ["dishonest"] },
+    { "word": "polite", "partOfSpeech": "adjective", "meaningEnglish": "having good manners", "meaningHindi": "विनम्र", "meaningOdia": "ଶିଷ୍ଟ", "rootOrTrick": "Think of 'poli-shed' manners - smooth and pleasant behaviour.", "examples": ["Always be polite to your teachers.", "She gave a polite reply."], "synonyms": ["courteous", "respectful"], "antonyms": ["rude"] },
+    { "word": "opportunity", "partOfSpeech": "noun", "meaningEnglish": "a chance to do something", "meaningHindi": "अवसर", "meaningOdia": "ସୁଯୋଗ", "rootOrTrick": "Think of an open door - an opportunity is an 'open' chance walking through.", "examples": ["This job is a great opportunity for her.", "I didn't get the opportunity to speak."], "synonyms": ["chance", "opening"], "antonyms": ["obstacle"] },
+    { "word": "difficult", "partOfSpeech": "adjective", "meaningEnglish": "not easy; hard to do", "meaningHindi": "कठिन", "meaningOdia": "କଷ୍ଟସାଧ୍ୟ", "rootOrTrick": "'Dif-' + 'ficult' sounds like 'difficulty' - the noun and adjective share the same root.", "examples": ["English articles are difficult for many learners.", "It was a difficult decision."], "synonyms": ["hard", "tough"], "antonyms": ["easy"] },
+    { "word": "explain", "partOfSpeech": "verb", "meaningEnglish": "to make something clear to someone", "meaningHindi": "समझाना", "meaningOdia": "ବୁଝାଇବା", "rootOrTrick": "'Ex-' (out) + 'plain' (flat/clear) - to explain is to make something flat and clear, out in the open.", "examples": ["Can you explain this grammar rule again?", "The teacher explained the lesson slowly."], "synonyms": ["clarify", "describe"], "antonyms": ["confuse"] },
+    { "word": "remember", "partOfSpeech": "verb", "meaningEnglish": "to keep something in your memory", "meaningHindi": "याद रखना", "meaningOdia": "ମନେ ରଖିବା", "rootOrTrick": "'Re-' (again) + 'member' (part) - to remember is to bring a part of the past back again.", "examples": ["I always remember to lock the door.", "Do you remember her name?"], "synonyms": ["recall", "recollect"], "antonyms": ["forget"] },
+    { "word": "careful", "partOfSpeech": "adjective", "meaningEnglish": "paying close attention to avoid mistakes or danger", "meaningHindi": "सावधान", "meaningOdia": "ସାବଧାନ", "rootOrTrick": "'Care' + 'ful' (full of) - full of care.", "examples": ["Be careful while crossing the road.", "She is a careful writer who checks her grammar."], "synonyms": ["cautious", "attentive"], "antonyms": ["careless"] }
+  ],
+  "listen": { "theme": "introducing yourself in English", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Write a short paragraph about yourself: your name, where you live, and one thing you want to improve about your English.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "My name is Priya and I live in a small town in Odisha. I am a student, and I enjoy reading storybooks in my free time. My English is at a basic level right now, and I often make mistakes with articles like 'a', 'an', and 'the', because Odia does not use words like these in the same way. I also sometimes mix up tenses when I am speaking quickly. My goal over the next 180 days is to become confident enough to write a full essay in English and to speak for two minutes without stopping. I know this will take daily practice, but I am ready to start today, one small step at a time.",
+    "selfCheckList": [
+      "Did I introduce my name and where I live?",
+      "Did I mention one thing I want to improve?",
+      "Did I keep my sentences short and correct, not long and confusing?",
+      "Did I check my articles (a, an, the)?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "shadowing",
+    "prompt": "Read this sentence aloud slowly, then say it again at normal speed: 'My name is [your name], and I am learning English to improve my writing, vocabulary, and speaking skills.'",
+    "modelAnswerText": "My name is Meera, and I am learning English to improve my writing, vocabulary, and speaking skills.",
+    "minSeconds": 20,
+    "selfCheckList": [
+      "Did I say every word clearly?",
+      "Did I pause slightly at the comma?",
+      "Did I speak without long gaps or 'um' sounds?",
+      "Did my sentence last at least 20 seconds when I said it slowly?"
+    ]
+  }
+}

@@ -12,10 +12,9 @@ function completedDay(date: string, dayNumber: number): DailyProgress {
     grammarDone: true,
     readingDone: true,
     vocabularyDone: true,
+    listenDone: true,
     writingDone: true,
     speakingDone: true,
-    extraDone: true,
-    endOfDayDone: true,
     completedAt: `${date}T20:00:00.000Z`,
   };
 }

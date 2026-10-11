@@ -1,0 +1,84 @@
+{
+  "day": 6,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "article the definite article usage", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Articles: the",
+    "rule": "Use 'the' when you talk about a specific thing that both you and the listener/reader already know about - something already mentioned, unique, or obvious from context. Use 'a/an' the first time you mention something, and 'the' after that, or when there is only one of something.",
+    "examples": [
+      "I saw a dog. The dog was barking loudly. (first mention 'a dog', then 'the dog' because it's now known)",
+      "The sun rises in the east. (there is only one sun)",
+      "Please close the door. (a specific, known door)",
+      "She is the best student in our class. (superlative - there is only one 'best')"
+    ],
+    "odiaNote": "Since Odia has no articles at all, Odia speakers often leave out 'the' completely, saying 'Close door' instead of 'Close the door,' or they may add 'the' in places where English does not need it, because the rule feels unfamiliar either way.",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Fill the blank: 'I bought a pen. ___ pen is blue.'", "answer": "The", "explanation": "After the first mention ('a pen'), the second mention uses 'the' because it is now a specific, known pen." },
+      { "type": "fill-blank", "prompt": "Fill the blank: '___ Earth moves around the sun.'", "answer": "The", "explanation": "There is only one Earth, so 'the' is used." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'She is ___ tallest girl in the class.'", "answer": "the", "explanation": "Superlatives (tallest, best, first) always take 'the' because there is only one possible answer." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'Please close door.'", "answer": "Please close the door.", "explanation": "The door is a specific, known object in the room, so it needs 'the', which cannot be left out as it often is in Odia." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'Sun is very hot today.'", "answer": "The sun is very hot today.", "explanation": "'Sun' refers to the one and only sun, so it needs 'the'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'He is best player in the team.'", "answer": "He is the best player in the team.", "explanation": "Superlative adjectives like 'best' always require 'the'." },
+      { "type": "rewrite", "prompt": "Rewrite correctly, adding articles where needed: 'I met teacher. Teacher gave good advice.'", "answer": "I met a teacher. The teacher gave good advice.", "explanation": "First mention uses 'a' (any teacher); the second mention uses 'the' since it's now the same, known teacher." },
+      { "type": "translate", "prompt": "Write in English: 'There is one river near our village. The river is very wide.'", "answer": "There is a river near our village. The river is very wide.", "explanation": "First mention takes 'a' (introducing it); the second mention takes 'the' because it is now the specific river already mentioned." }
+    ]
+  },
+  "reading": {
+    "passage": "The Mahanadi is one of the largest rivers in Odisha, and it has shaped the life of millions of people who live along its banks. For centuries, farmers near the river have depended on it for irrigation, especially during the dry months when rainfall is unpredictable. The river also supports fishing communities, many of whom have passed their knowledge of the water down through several generations. In recent decades, however, the Mahanadi has faced new pressures, including pollution from nearby towns and reduced water flow because of dams built upstream. Environmental researchers have warned that if these pressures continue without proper management, both farming and fishing along the river could become much harder in the coming years. Local community groups have started small projects to clean parts of the riverbank and to educate children about why the river matters, not just for its practical uses, but as part of the region's identity. One volunteer, Debashish, said that many young people in his town had never thought carefully about the river before joining these projects, even though they had grown up seeing it every day. He believes that understanding a problem is the first step toward protecting it, whether the subject is a river or anything else that people rely on without fully noticing its importance.",
+    "wordCount": 220,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["The history of Odisha", "The importance of the Mahanadi river and the challenges it faces", "Fishing communities in India", "A volunteer named Debashish"], "correctIndex": 1, "explanations": ["Odisha's general history is not the focus.", "Correct - the passage discusses the river's role and the pressures threatening it.", "Fishing is one detail, not the whole topic.", "Debashish is mentioned as an example, not the main subject."] },
+      { "type": "detail", "prompt": "What two pressures does the Mahanadi face, according to the passage?", "options": ["Flooding and earthquakes", "Pollution and reduced water flow from dams", "Overfishing and deforestation", "Tourism and construction"], "correctIndex": 1, "explanations": ["Flooding and earthquakes are not mentioned.", "Correct - these are both stated directly in the passage.", "Overfishing and deforestation are not mentioned.", "Tourism and construction are not mentioned."] },
+      { "type": "inference", "prompt": "What does Debashish seem to believe about solving problems?", "options": ["Problems solve themselves with time", "Understanding a problem is the first step to protecting against it", "Only experts can solve environmental problems", "Young people are not interested in local issues"], "correctIndex": 1, "explanations": ["The passage doesn't suggest problems solve themselves.", "Correct - this is stated as his belief directly.", "The passage doesn't say only experts can help; volunteers are doing the work.", "The passage shows young people getting involved through the projects."] },
+      { "type": "tone", "prompt": "What is the overall tone of the passage?", "options": ["Alarmist and panicked", "Concerned but hopeful about community action", "Indifferent", "Purely celebratory with no concerns"], "correctIndex": 1, "explanations": ["The tone is measured, not panicked.", "Correct - the passage raises real concerns while highlighting positive community efforts.", "The passage shows clear concern, more than indifference.", "The passage does mention real problems, not just celebration."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'upstream' means:", "options": ["Below the river's mouth", "Further up, toward the river's source", "Across the river", "Underground"], "correctIndex": 1, "explanations": ["This describes the opposite direction.", "Correct - 'upstream' means further toward the beginning/source of the river.", "The passage isn't describing crossing the river.", "There's no underground reference."] }
+    ],
+    "summaryKeyPoints": [
+      "The Mahanadi river is vital to farming and fishing communities in Odisha.",
+      "The river faces new pressures: pollution and reduced flow due to upstream dams.",
+      "Researchers warn these pressures could harm farming and fishing if unmanaged.",
+      "Local community groups run small projects to clean the riverbank and educate children.",
+      "Debashish believes understanding a problem is the first step to protecting it."
+    ],
+    "modelSummary": "The Mahanadi river supports farming and fishing communities across Odisha, but it now faces pollution and reduced water flow from upstream dams. Researchers warn these pressures could seriously affect local livelihoods if left unmanaged. In response, community groups, including volunteers like Debashish, run small projects to clean the riverbank and teach children about the river's importance, believing that understanding a problem is the first step toward protecting it."
+  },
+  "vocabulary": [
+    { "word": "environment", "partOfSpeech": "noun", "meaningEnglish": "the natural world, or the surroundings of a place", "meaningHindi": "पर्यावरण", "meaningOdia": "ପରିବେଶ", "rootOrTrick": "'Environ' (surround) + 'ment' - everything that surrounds you.", "examples": ["We must protect our environment.", "The classroom environment helps students focus."], "synonyms": ["surroundings", "nature"], "antonyms": [] },
+    { "word": "pollution", "partOfSpeech": "noun", "meaningEnglish": "harmful substances that damage the environment", "meaningHindi": "प्रदूषण", "meaningOdia": "ପ୍ରଦୂଷଣ", "rootOrTrick": "From 'pollute' (to make dirty) - pollution is the result of polluting something.", "examples": ["River pollution harms fish and farmers.", "Factories cause a lot of air pollution."], "synonyms": ["contamination"], "antonyms": [] },
+    { "word": "recycle", "partOfSpeech": "verb", "meaningEnglish": "to process used materials so they can be used again", "meaningHindi": "पुनर्चक्रण करना", "meaningOdia": "ପୁନଃ ବ୍ୟବହାର କରିବା", "rootOrTrick": "'Re-' (again) + 'cycle' (circle) - the material goes around the circle again.", "examples": ["We should recycle paper and plastic.", "The village started a project to recycle waste."], "synonyms": ["reuse"], "antonyms": ["discard"] },
+    { "word": "resource", "partOfSpeech": "noun", "meaningEnglish": "a useful material or supply", "meaningHindi": "संसाधन", "meaningOdia": "ସମ୍ବଳ", "rootOrTrick": "'Re-' + 'source' - something you can draw on as a source again and again.", "examples": ["Water is a valuable resource.", "The library is a great resource for students."], "synonyms": ["supply", "asset"], "antonyms": [] },
+    { "word": "protect", "partOfSpeech": "verb", "meaningEnglish": "to keep something safe from harm", "meaningHindi": "सुरक्षा करना", "meaningOdia": "ସୁରକ୍ଷା କରିବା", "rootOrTrick": "'Pro-' (in front) + 'tect' (cover) - to cover and shield something in front of danger.", "examples": ["We must protect the river from pollution.", "A helmet protects your head."], "synonyms": ["defend", "guard"], "antonyms": ["harm"] },
+    { "word": "climate", "partOfSpeech": "noun", "meaningEnglish": "the usual weather conditions of a place over a long time", "meaningHindi": "जलवायु", "meaningOdia": "ଜଳବାୟୁ", "rootOrTrick": "From Greek 'klima' (slope/region) - how the sun's slope affects a region's weather.", "examples": ["Odisha has a mostly tropical climate.", "Climate change affects farming."], "synonyms": ["weather pattern"], "antonyms": [] },
+    { "word": "forest", "partOfSpeech": "noun", "meaningEnglish": "a large area covered with trees", "meaningHindi": "जंगल", "meaningOdia": "ଜଙ୍ଗଲ", "rootOrTrick": "From Latin 'foris' (outside) - land outside the cleared village area.", "examples": ["The forest is home to many animals.", "They are planting trees to restore the forest."], "synonyms": ["woodland"], "antonyms": [] },
+    { "word": "wildlife", "partOfSpeech": "noun", "meaningEnglish": "wild animals living in their natural environment", "meaningHindi": "वन्यजीव", "meaningOdia": "ବନ୍ୟଜୀବ", "rootOrTrick": "'Wild' + 'life' - life that lives wild, not kept by humans.", "examples": ["Simlipal is famous for its wildlife.", "Pollution harms local wildlife."], "synonyms": ["fauna"], "antonyms": [] },
+    { "word": "waste", "partOfSpeech": "noun", "meaningEnglish": "material that is no longer needed and thrown away", "meaningHindi": "कचरा", "meaningOdia": "ଅପଚୟ", "rootOrTrick": "Think of 'wasted' food or effort - something thrown away unused.", "examples": ["The town needs a better waste management system.", "Don't waste water while brushing your teeth."], "synonyms": ["rubbish", "garbage"], "antonyms": [] },
+    { "word": "conserve", "partOfSpeech": "verb", "meaningEnglish": "to protect and use carefully without wasting", "meaningHindi": "संरक्षित करना", "meaningOdia": "ସଂରକ୍ଷଣ କରିବା", "rootOrTrick": "'Con-' (together) + 'serve' (keep) - keeping something together, safe for later.", "examples": ["We must conserve water during summer.", "The project aims to conserve the river's health."], "synonyms": ["preserve", "save"], "antonyms": ["waste"] }
+  ],
+  "listen": { "theme": "protecting rivers and local environments", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Write a paragraph about a natural resource (river, forest, or similar) near your home. Describe why it is important and one problem it faces.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "The Mahanadi river flows near my town and is important to many farmers and fishing families in the area. For generations, people have depended on the river for irrigation and food. In recent years, however, the river has faced pollution from nearby towns and reduced water flow because of dams built upstream. If this continues, both farming and fishing could become much harder. Some local volunteers have started small projects to clean parts of the riverbank and to teach children why the river matters. I believe we should all try to conserve water and avoid throwing waste into rivers, because protecting the environment benefits everyone in the long run.",
+    "selfCheckList": [
+      "Did I describe the resource and why it is important?",
+      "Did I describe one problem it faces?",
+      "Did I use 'the' correctly for specific, known things?",
+      "Did I use at least 2 of today's new words?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "read-aloud",
+    "prompt": "Describe in 3-4 sentences one thing people in your area should do to protect the environment.",
+    "modelAnswerText": "People in my area should try to recycle more waste instead of throwing it into the river. We should also conserve water, especially during summer. If more people understood the importance of the environment, pollution would be much lower.",
+    "minSeconds": 25,
+    "selfCheckList": [
+      "Did I suggest one clear action?",
+      "Did I explain why it matters?",
+      "Did I use 'the' correctly?",
+      "Did I speak for at least 25 seconds?"
+    ]
+  }
+}

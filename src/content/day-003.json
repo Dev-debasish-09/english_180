@@ -1,0 +1,84 @@
+{
+  "day": 3,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "personal pronouns he she it they", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Pronouns (he, she, it, they, and the he/she mistake)",
+    "rule": "A pronoun replaces a noun so we don't repeat it. Use 'he' for a male, 'she' for a female, 'it' for a thing or animal (usually), and 'they' for more than one person or thing. English pronouns must match the gender and number of the noun they replace.",
+    "examples": [
+      "Ravi is my brother. He is 10 years old.",
+      "Sita is my sister. She likes drawing.",
+      "The book is on the table. It is new.",
+      "Ravi and Sita are playing. They are happy."
+    ],
+    "odiaNote": "Odia pronouns (ସେ) do not always change based on gender the way English 'he' and 'she' do, so Odia speakers often mix up 'he' and 'she' when speaking English, even when they know the correct gender of the person.",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Fill the blank: 'My mother is a teacher. ___ works in a school.'", "answer": "She", "explanation": "'Mother' is female, so the pronoun must be 'She', not 'He'." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'My father is a farmer. ___ grows rice.'", "answer": "He", "explanation": "'Father' is male, so the pronoun must be 'He', not 'She'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'My sister is sick. He is resting at home.'", "answer": "My sister is sick. She is resting at home.", "explanation": "'Sister' is female, so the correct pronoun is 'She', not 'He'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'The children are playing. He are happy.'", "answer": "The children are playing. They are happy.", "explanation": "'Children' is plural, so the pronoun must be 'They' with the plural verb 'are', not 'He'." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'This is my pen. ___ is blue.'", "answer": "It", "explanation": "A pen is a thing, so the correct pronoun is 'It'." },
+      { "type": "rewrite", "prompt": "Rewrite using a pronoun: 'Anita is a doctor. Anita works at the hospital.'", "answer": "Anita is a doctor. She works at the hospital.", "explanation": "'Anita' is female, so 'She' replaces her name the second time." },
+      { "type": "rewrite", "prompt": "Rewrite using a pronoun: 'Ramesh and Suresh are brothers. Ramesh and Suresh live together.'", "answer": "Ramesh and Suresh are brothers. They live together.", "explanation": "Since there are two people, the plural pronoun 'They' replaces their names." },
+      { "type": "translate", "prompt": "Write in English: 'My teacher (female) is kind. She helps every student.'", "answer": "My teacher is kind. She helps every student.", "explanation": "Since the teacher is female, 'She' is the correct pronoun, matching the gender exactly." }
+    ]
+  },
+  "reading": {
+    "passage": "Anita Mohanty is a schoolteacher in a small town in Odisha. She has been teaching English to Class 6 students for the past eight years. Many of her students come from homes where no one speaks English, so she often has to explain even simple words very carefully. Anita believes that fear is the biggest barrier to learning a new language, not intelligence. She tells her students that it is completely normal to feel shy while speaking a language they are still learning. Every Friday, she organizes a short speaking activity where students must talk for one minute about any topic they like, such as their family, their favourite food, or a cricket match they watched. At first, most students struggled to speak for even thirty seconds, but after a few months, many of them could speak for the full minute without stopping. Anita's own English was weak when she was a student, and she remembers how nervous she felt the first time she had to give a speech in school. She often shares this story with her students to show them that improvement is always possible with regular practice, even for someone who once felt the same fear they feel now.",
+    "wordCount": 207,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["Anita's personal life", "A teacher helping students overcome fear of speaking English", "A school in Odisha", "Cricket matches"], "correctIndex": 1, "explanations": ["Her personal life is mentioned only briefly, as a supporting detail.", "Correct - the passage focuses on how Anita helps students speak English confidently.", "The school is just the setting.", "Cricket is only given as an example topic."] },
+      { "type": "detail", "prompt": "What does Anita organize every Friday?", "options": ["A grammar test", "A one-minute speaking activity", "A reading competition", "A parent meeting"], "correctIndex": 1, "explanations": ["No test is mentioned in the passage.", "Correct - the passage directly states this weekly activity.", "There is no reading competition mentioned.", "No parent meeting is described."] },
+      { "type": "inference", "prompt": "Why does Anita share her own story of nervousness with students?", "options": ["To embarrass herself", "To show them improvement is possible with practice", "To end the speaking activity early", "To avoid teaching grammar"], "correctIndex": 1, "explanations": ["The passage shows this is purposeful, not embarrassing.", "Correct - she wants to encourage students by showing her own past struggle and growth.", "There's no connection between her story and ending the activity.", "The passage doesn't say she avoids grammar."] },
+      { "type": "tone", "prompt": "What is the tone of the passage toward Anita's teaching approach?", "options": ["Critical", "Respectful and approving", "Mocking", "Neutral and indifferent"], "correctIndex": 1, "explanations": ["The passage does not criticize her approach.", "Correct - the passage presents her methods and empathy in a positive light.", "There is no mocking tone.", "The detailed, positive description shows more than indifference."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'barrier' means:", "options": ["A type of wall made of bricks", "Something that blocks progress", "A school subject", "A speaking competition"], "correctIndex": 1, "explanations": ["This is too literal; the passage isn't about physical walls.", "Correct - 'barrier' here means an obstacle that prevents learning.", "Barrier is not a school subject.", "Barrier is not a competition in this context."] }
+    ],
+    "summaryKeyPoints": [
+      "Anita Mohanty teaches English to Class 6 students in a small town in Odisha.",
+      "She believes fear, not intelligence, is the biggest barrier to learning English.",
+      "Every Friday, students practice speaking for one minute on a topic of their choice.",
+      "Students who struggled at first improved after months of regular practice.",
+      "Anita shares her own past nervousness to show students that improvement is possible."
+    ],
+    "modelSummary": "Anita Mohanty, an English teacher in Odisha, believes fear is the biggest barrier to learning a new language. She runs a weekly one-minute speaking activity for her students, who improved from struggling after thirty seconds to speaking confidently for a full minute over several months. She shares her own early nervousness about public speaking to show students that steady practice leads to real improvement."
+  },
+  "vocabulary": [
+    { "word": "suggest", "partOfSpeech": "verb", "meaningEnglish": "to offer an idea or plan", "meaningHindi": "सुझाव देना", "meaningOdia": "ପରାମର୍ଶ ଦେବା", "rootOrTrick": "'Sug-' (under) + 'gest' (carry) - to carry an idea gently to someone.", "examples": ["She suggested a new way to practice speaking.", "I suggest we start the meeting early."], "synonyms": ["propose", "recommend"], "antonyms": ["oppose"] },
+    { "word": "borrow", "partOfSpeech": "verb", "meaningEnglish": "to take something and return it later", "meaningHindi": "उधार लेना", "meaningOdia": "ଉଧାର ନେବା", "rootOrTrick": "Remember: you 'borrow' FROM someone, you 'lend' TO someone.", "examples": ["May I borrow your pen?", "He borrowed a book from the library."], "synonyms": ["take on loan"], "antonyms": ["lend"] },
+    { "word": "lend", "partOfSpeech": "verb", "meaningEnglish": "to give something temporarily, expecting it back", "meaningHindi": "उधार देना", "meaningOdia": "ଉଧାର ଦେବା", "rootOrTrick": "Pair it with 'borrow': I lend TO you, you borrow FROM me.", "examples": ["Can you lend me your notebook?", "She lent her friend some money."], "synonyms": ["loan"], "antonyms": ["borrow"] },
+    { "word": "promise", "partOfSpeech": "verb", "meaningEnglish": "to say firmly that you will do something", "meaningHindi": "वादा करना", "meaningOdia": "ପ୍ରତିଜ୍ଞା କରିବା", "rootOrTrick": "'Pro-' (forward) + 'mise' (send) - you send your word forward as a guarantee.", "examples": ["I promise to practice English every day.", "He promised to return the book."], "synonyms": ["vow", "pledge"], "antonyms": ["break a promise"] },
+    { "word": "apologize", "partOfSpeech": "verb", "meaningEnglish": "to say you are sorry", "meaningHindi": "माफी मांगना", "meaningOdia": "କ୍ଷମା ମାଗିବା", "rootOrTrick": "'Apo-' (away) + 'logos' (speech) - speaking away your mistake.", "examples": ["She apologized for being late.", "You should apologize if you made a mistake."], "synonyms": ["say sorry"], "antonyms": [] },
+    { "word": "announce", "partOfSpeech": "verb", "meaningEnglish": "to tell people something officially or publicly", "meaningHindi": "घोषणा करना", "meaningOdia": "ଘୋଷଣା କରିବା", "rootOrTrick": "'An-' + 'nounce' (nuntiare - to report) - to report news to everyone.", "examples": ["The teacher announced the exam date.", "They announced the results today."], "synonyms": ["declare", "proclaim"], "antonyms": ["conceal"] },
+    { "word": "discover", "partOfSpeech": "verb", "meaningEnglish": "to find something for the first time", "meaningHindi": "खोजना", "meaningOdia": "ଆବିଷ୍କାର କରିବା", "rootOrTrick": "'Dis-' (remove) + 'cover' - to remove the cover and see what's underneath.", "examples": ["She discovered a new way to remember words.", "Scientists discovered a new species."], "synonyms": ["find", "uncover"], "antonyms": ["hide"] },
+    { "word": "government", "partOfSpeech": "noun", "meaningEnglish": "the group of people who officially control a country or state", "meaningHindi": "सरकार", "meaningOdia": "ସରକାର", "rootOrTrick": "'Govern' + 'ment' - the system that governs/rules a place.", "examples": ["The government built a new school in the village.", "She wants to work for the government."], "synonyms": ["administration"], "antonyms": [] },
+    { "word": "citizen", "partOfSpeech": "noun", "meaningEnglish": "a legal member of a country", "meaningHindi": "नागरिक", "meaningOdia": "ନାଗରିକ", "rootOrTrick": "Related to 'city' - originally a member of a city-state, now of a country.", "examples": ["Every citizen has the right to vote.", "She is a proud citizen of India."], "synonyms": ["national", "resident"], "antonyms": ["foreigner"] },
+    { "word": "responsible", "partOfSpeech": "adjective", "meaningEnglish": "having a duty to deal with something", "meaningHindi": "जिम्मेदार", "meaningOdia": "ଦାୟିତ୍ୱଶୀଲ", "rootOrTrick": "'Response' + '-ible' - able to respond/answer for your actions.", "examples": ["She is responsible for organizing the event.", "Students should be responsible for their own learning."], "synonyms": ["accountable"], "antonyms": ["irresponsible"] }
+  ],
+  "listen": { "theme": "overcoming shyness when speaking a new language", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Write about a teacher or person who helped you learn something important. Describe what they taught you and how it helped.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "My English teacher in school taught me that fear is the biggest barrier to learning a language, not lack of intelligence. She organized a weekly speaking activity where every student had to talk for one minute about any topic. At first, I could barely speak for thirty seconds without stopping, and I often apologized for my mistakes. Over several months, with regular practice, I slowly became more confident. She promised the class that improvement was possible if we kept trying, and she was right. I still make mistakes, but I no longer feel as nervous as before. I am grateful she suggested this activity, because it changed how I think about learning English.",
+    "selfCheckList": [
+      "Did I describe who helped me and what they taught?",
+      "Did I explain how it helped me?",
+      "Did I use at least 2 of today's new words?",
+      "Did I use 'he' or 'she' correctly for the person?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "shadowing",
+    "prompt": "Read this aloud slowly, then at normal speed: 'My teacher always tells us that mistakes are a normal part of learning, and she never makes us feel bad about them.'",
+    "modelAnswerText": "My teacher always tells us that mistakes are a normal part of learning, and she never makes us feel bad about them.",
+    "minSeconds": 20,
+    "selfCheckList": [
+      "Did I use 'she' correctly since the teacher is female?",
+      "Did I pause at the comma?",
+      "Did I speak clearly without long gaps?",
+      "Did my sentence last at least 20 seconds?"
+    ]
+  }
+}

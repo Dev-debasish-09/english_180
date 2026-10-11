@@ -1,0 +1,83 @@
+{
+  "day": 2,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "nouns singular plural common proper", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Nouns: common/proper and singular/plural",
+    "rule": "Nouns name people, places, things, or ideas. Common nouns are general (city, book); proper nouns name a specific person or place and always start with a capital letter (Bhubaneswar, Ravi). Most nouns add -s or -es for plural, but some change form completely (child -> children, man -> men).",
+    "examples": [
+      "The city of Bhubaneswar is the capital of Odisha. (city = common noun, Bhubaneswar/Odisha = proper nouns)",
+      "I bought two books and one pen.",
+      "The children are playing in the park. (child -> children, irregular plural)"
+    ],
+    "odiaNote": "Odia script has no capital letters, so Odia speakers often forget to capitalize proper nouns in English (names, places). Odia also marks plural differently, so the English -s/-es ending is often forgotten, especially after numbers like 'three book' instead of 'three books.'",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Write the plural of 'book'.", "answer": "books", "explanation": "Most nouns simply add -s to form the plural." },
+      { "type": "fill-blank", "prompt": "Write the plural of 'child'.", "answer": "children", "explanation": "'Child' is an irregular noun - its plural changes completely instead of adding -s." },
+      { "type": "fill-blank", "prompt": "Write the plural of 'city'.", "answer": "cities", "explanation": "Nouns ending in a consonant + y change the y to i and add -es." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'I have three book.'", "answer": "I have three books.", "explanation": "After a number greater than one, the noun must be plural: 'books', not 'book'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'i live in bhubaneswar.'", "answer": "I live in Bhubaneswar.", "explanation": "'I' (the pronoun) and 'Bhubaneswar' (a proper noun/place name) must both be capitalized." },
+      { "type": "fill-blank", "prompt": "Which of these words is a proper noun: city, Delhi, building, river?", "answer": "Delhi", "explanation": "'Delhi' names one specific place, so it is a proper noun and is capitalized." },
+      { "type": "rewrite", "prompt": "Rewrite in the plural: 'The man is walking.'", "answer": "The men are walking.", "explanation": "'Man' becomes 'men' (irregular plural), and the verb changes from 'is' to 'are' to agree with the plural subject." },
+      { "type": "translate", "prompt": "Write in English: subject 'two women', verb 'are cooking', object 'rice'.", "answer": "Two women are cooking rice.", "explanation": "'Woman' becomes 'women' in the plural, and the verb 'are' agrees with the plural subject 'two women'." }
+    ]
+  },
+  "reading": {
+    "passage": "Every Sunday, a large haat, or weekly market, is held in a village near Puri. Farmers from nearby villages bring vegetables, rice, and fish to sell. The market gets very crowded by mid-morning, with hundreds of people walking between the small stalls. Sabita, a young woman who sells flowers, arrives before sunrise to get a good spot near the entrance. She says that the market is not just a place to buy and sell things; it is also a place where neighbors meet and share news. Some elderly villagers come to the haat mainly to talk with old friends, even if they do not plan to buy much furniture or anything expensive. Children run between the stalls, sometimes helping their parents carry small bags of vegetables. By early afternoon, the crowd starts to thin out, and shopkeepers begin packing their unsold goods. Sabita says she has been coming to this same market for six years, and in that time, she has seen several young sellers give up because the morning hours are so tiring. Still, she plans to continue, because the haat gives her a steady income and a strong sense of community that she does not want to lose.",
+    "wordCount": 198,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["A village near Puri", "A weekly market and its role in village life", "Sabita's flower business", "Farmers selling rice"], "correctIndex": 1, "explanations": ["The village is just the setting, not the main topic.", "Correct - the passage describes the haat and its social importance.", "This is one detail among several, not the main idea.", "This is mentioned only briefly."] },
+      { "type": "detail", "prompt": "What does Sabita sell at the market?", "options": ["Rice", "Fish", "Flowers", "Furniture"], "correctIndex": 2, "explanations": ["Rice is sold by farmers, not Sabita.", "Fish is sold by farmers, not Sabita.", "Correct - the passage directly states Sabita sells flowers.", "Furniture is only mentioned as something elderly villagers don't plan to buy."] },
+      { "type": "inference", "prompt": "Why do some elderly villagers visit the haat?", "options": ["To buy furniture", "Mainly to meet old friends", "To sell their own goods", "To avoid crowds"], "correctIndex": 1, "explanations": ["The passage says the opposite - they don't plan to buy much.", "Correct - the passage says they come mainly to talk with old friends.", "There's no mention of elderly villagers selling goods.", "The market is described as crowded, so this isn't their reason."] },
+      { "type": "tone", "prompt": "What is Sabita's attitude toward continuing her work at the market?", "options": ["Reluctant and unhappy", "Determined, despite the difficulty", "Indifferent", "Regretful"], "correctIndex": 1, "explanations": ["She is not described as unhappy about continuing.", "Correct - she acknowledges the tiring hours but plans to continue for income and community.", "She clearly cares about the outcome, so this isn't indifference.", "She does not express regret about her choice."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'thin out' means:", "options": ["To become physically thinner", "To become less crowded", "To get colder", "To close early"], "correctIndex": 1, "explanations": ["This takes the phrase too literally; it's not about people's bodies.", "Correct - 'thin out' here means the crowd gradually becomes smaller.", "Temperature is not mentioned.", "The passage says shopkeepers pack up, not that the market closes early."] }
+    ],
+    "summaryKeyPoints": [
+      "A weekly haat (market) near Puri brings farmers and sellers together every Sunday.",
+      "Sabita sells flowers and arrives early to get a good spot.",
+      "The market is a place for neighbors to meet, not just buy and sell.",
+      "Elderly villagers often come mainly to talk with old friends.",
+      "Sabita continues despite the tiring hours because of income and community."
+    ],
+    "modelSummary": "A weekly market (haat) near Puri brings together farmers, sellers, and villagers every Sunday. Sabita, a flower seller, arrives early for a good spot and says the market is as much a social gathering place as a place of business, especially for elderly villagers who come mainly to meet old friends. Despite the tiring early hours, Sabita continues selling because of the steady income and sense of community the market gives her."
+  },
+  "vocabulary": [
+    { "word": "village", "partOfSpeech": "noun", "meaningEnglish": "a small group of houses in the countryside", "meaningHindi": "गाँव", "meaningOdia": "ଗାଁ", "rootOrTrick": "Related to 'villa' - a small settlement of houses.", "examples": ["She grew up in a small village in Odisha.", "The village has only one school."], "synonyms": ["hamlet", "settlement"], "antonyms": ["city"] },
+    { "word": "neighbor", "partOfSpeech": "noun", "meaningEnglish": "a person who lives near you", "meaningHindi": "पड़ोसी", "meaningOdia": "ପଡ଼ିଶା", "rootOrTrick": "'Neigh-' (near) + 'bor' (dweller) - one who dwells nearby.", "examples": ["Our neighbor helped us carry the furniture.", "Be kind to your neighbors."], "synonyms": ["resident nearby"], "antonyms": ["stranger"] },
+    { "word": "crowd", "partOfSpeech": "noun", "meaningEnglish": "a large group of people gathered together", "meaningHindi": "भीड़", "meaningOdia": "ଜନସମାଗମ", "rootOrTrick": "Picture a 'crowded' room packed with people.", "examples": ["A large crowd gathered at the market.", "She doesn't like crowded places."], "synonyms": ["mass", "throng"], "antonyms": ["handful"] },
+    { "word": "furniture", "partOfSpeech": "noun", "meaningEnglish": "movable items like tables and chairs in a room", "meaningHindi": "फर्नीचर", "meaningOdia": "ଆସବାବପତ୍ର", "rootOrTrick": "From French 'fournir' (to furnish/equip) - items that equip a room.", "examples": ["They bought new furniture for the house.", "The furniture in this shop is expensive."], "synonyms": ["fittings"], "antonyms": [] },
+    { "word": "luggage", "partOfSpeech": "noun", "meaningEnglish": "bags and suitcases used for travel", "meaningHindi": "सामान", "meaningOdia": "ଜିନିଷପତ୍ର", "rootOrTrick": "From 'lug' (to carry something heavy) - what you lug around while travelling.", "examples": ["Please keep your luggage with you.", "He lost his luggage at the station."], "synonyms": ["baggage"], "antonyms": [] },
+    { "word": "document", "partOfSpeech": "noun", "meaningEnglish": "an official paper with written information", "meaningHindi": "दस्तावेज़", "meaningOdia": "ଦଲିଲ", "rootOrTrick": "From 'docere' (to teach) - a document teaches/records information.", "examples": ["Keep your identity document safe.", "She signed the important document."], "synonyms": ["paper", "record"], "antonyms": [] },
+    { "word": "celebrate", "partOfSpeech": "verb", "meaningEnglish": "to do something enjoyable for a special occasion", "meaningHindi": "मनाना", "meaningOdia": "ପାଳନ କରିବା", "rootOrTrick": "From 'celeber' (famous/honoured) - you make a day 'famous' by celebrating it.", "examples": ["We celebrated her birthday with cake.", "The village celebrates the harvest festival every year."], "synonyms": ["commemorate"], "antonyms": ["ignore"] },
+    { "word": "achieve", "partOfSpeech": "verb", "meaningEnglish": "to succeed in doing something after effort", "meaningHindi": "हासिल करना", "meaningOdia": "ହାସଲ କରିବା", "rootOrTrick": "'A-' + 'chieve' (chief/head) - to reach the 'head' or top of a goal.", "examples": ["She achieved her goal of speaking fluent English.", "Hard work helps you achieve success."], "synonyms": ["accomplish", "attain"], "antonyms": ["fail"] },
+    { "word": "patient", "partOfSpeech": "adjective", "meaningEnglish": "able to wait calmly without complaining", "meaningHindi": "सहनशील", "meaningOdia": "ସହନଶୀଳ", "rootOrTrick": "From 'pati' (to suffer/endure) - a patient person can endure waiting.", "examples": ["Be patient while learning a new language.", "The teacher is very patient with beginners."], "synonyms": ["tolerant", "calm"], "antonyms": ["impatient"] },
+    { "word": "comfortable", "partOfSpeech": "adjective", "meaningEnglish": "giving a feeling of physical ease or relaxation", "meaningHindi": "आरामदायक", "meaningOdia": "ସୁଖଦାୟକ", "rootOrTrick": "'Com-' (with) + 'fort' (strength) - something that gives you strength and ease.", "examples": ["This chair is very comfortable.", "I feel comfortable speaking English with my friends now."], "synonyms": ["cosy", "relaxed"], "antonyms": ["uncomfortable"] }
+  ],
+  "listen": { "theme": "visiting a local market", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Describe a market or shop in your area. Mention what people buy there, and what the place looks or feels like.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "Near my house, there is a small weekly market that opens every Sunday morning. Farmers from nearby villages bring fresh vegetables, fish, and rice to sell. The market becomes very crowded by nine o'clock, and it is often difficult to walk between the stalls. My neighbor sells flowers near the entrance, and she arrives before sunrise to get a good spot. I enjoy visiting the market because it is not only a place to buy things, but also a place where people meet and talk. Elderly people often come just to greet old friends. Although the market is noisy and a little tiring to walk through, I find it one of the most lively and comfortable places in our area.",
+    "selfCheckList": [
+      "Did I describe what people buy there?",
+      "Did I describe how the place looks or feels?",
+      "Did I use at least 2 of today's new words?",
+      "Did I check my articles (a, an, the) and plural nouns?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "read-aloud",
+    "prompt": "Describe your neighborhood in 3-4 sentences: where it is, what it looks like, and one thing you like about it.",
+    "modelAnswerText": "I live in a small neighborhood near the center of town. The houses are close together, and there is a small market just five minutes away. I like my neighborhood because my neighbors are friendly and always ready to help.",
+    "minSeconds": 25,
+    "selfCheckList": [
+      "Did I mention where my neighborhood is?",
+      "Did I describe what it looks like?",
+      "Did I say one thing I like about it?",
+      "Did I speak for at least 25 seconds?"
+    ]
+  }
+}

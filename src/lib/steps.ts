@@ -1,40 +1,46 @@
 import type { DailyProgress, StageId, StepKey, TaskKey } from "../db/types";
 import type { DayContent } from "../content/types";
-import { isExtraRequired } from "./date";
+
+export type TaskKind = "in-app" | "link";
 
 export interface StepDef {
   key: StepKey;
   taskField: TaskKey;
   label: string;
   minutesHint: number;
-  navPath: string | null; // null = no dedicated module page yet (Phase 1)
+  kind: TaskKind;
+  // Only for "in-app" tasks: the dedicated page to open.
+  navPath: string | null;
 }
 
+// Suggested order for the day - not locked. You can do these in any order.
 export const STEP_ORDER: StepDef[] = [
-  { key: "warmup", taskField: "warmupDone", label: "Warm-up", minutesHint: 10, navPath: null },
-  { key: "watch", taskField: "watchDone", label: "Watch and learn", minutesHint: 13, navPath: "/watch" },
-  { key: "grammar", taskField: "grammarDone", label: "Grammar", minutesHint: 15, navPath: "/grammar" },
-  { key: "reading", taskField: "readingDone", label: "Reading", minutesHint: 20, navPath: "/reading" },
-  { key: "vocabulary", taskField: "vocabularyDone", label: "Vocabulary", minutesHint: 10, navPath: "/vocabulary" },
-  { key: "writing", taskField: "writingDone", label: "Writing", minutesHint: 20, navPath: "/writing" },
-  { key: "speaking", taskField: "speakingDone", label: "Speaking", minutesHint: 10, navPath: "/speaking" },
-  { key: "extra", taskField: "extraDone", label: "Today's Extra", minutesHint: 10, navPath: "/resources" },
-  { key: "endOfDay", taskField: "endOfDayDone", label: "End-of-day card", minutesHint: 5, navPath: null },
+  { key: "warmup", taskField: "warmupDone", label: "Warm-up", minutesHint: 10, kind: "in-app", navPath: null },
+  { key: "watch", taskField: "watchDone", label: "Watch", minutesHint: 10, kind: "link", navPath: null },
+  { key: "grammar", taskField: "grammarDone", label: "Grammar", minutesHint: 15, kind: "in-app", navPath: "/grammar" },
+  { key: "reading", taskField: "readingDone", label: "Read", minutesHint: 15, kind: "link", navPath: "/reading" },
+  { key: "vocabulary", taskField: "vocabularyDone", label: "Vocabulary", minutesHint: 10, kind: "in-app", navPath: "/vocabulary" },
+  { key: "listen", taskField: "listenDone", label: "Listen", minutesHint: 10, kind: "link", navPath: null },
+  { key: "writing", taskField: "writingDone", label: "Write", minutesHint: 15, kind: "in-app", navPath: "/writing" },
+  { key: "speaking", taskField: "speakingDone", label: "Speak", minutesHint: 10, kind: "in-app", navPath: "/speaking" },
 ];
 
-// Plain-language fallback description for a step, used until that day's
-// content file (day-NNN.json) exists. Once content exists, callers should
-// prefer pulling a real title/prompt from it.
+export function getTaskNumber(key: StepKey): number {
+  return STEP_ORDER.findIndex((s) => s.key === key) + 1;
+}
+
+// Plain-language fallback description, used until that day's content
+// file (day-NNN.json) exists.
 export function getStepFallbackDescription(key: StepKey, stage: StageId): string {
   const byStage: Record<StepKey, Record<StageId, string>> = {
     warmup: {
-      foundation: "Review your flashcards and any error-bank sentences from past days.",
-      building: "Review your flashcards and any error-bank sentences from past days.",
-      exam: "Review your flashcards and any error-bank sentences from past days.",
+      foundation: "Review yesterday's words and any error-bank sentences.",
+      building: "Review yesterday's words and any error-bank sentences.",
+      exam: "Review yesterday's words and any error-bank sentences.",
     },
     watch: {
       foundation: "Watch a short video matched to today's grammar topic (Hindi-explained, e.g. Dear Sir).",
-      building: "Watch a short video matched to today's grammar topic (English only, e.g. engVid, English with Lucy).",
+      building: "Watch a short video matched to today's grammar topic (English only, e.g. engVid).",
       exam: "Watch a short video matched to today's grammar topic (exam-focused, e.g. GMAT Ninja).",
     },
     grammar: {
@@ -52,6 +58,11 @@ export function getStepFallbackDescription(key: StepKey, stage: StageId): string
       building: "Learn 15 new words with meanings in English, Hindi, and Odia.",
       exam: "Learn 20 GMAT-level words with meanings in English, Hindi, and Odia.",
     },
+    listen: {
+      foundation: "Listen to a short talk or episode, then write 5 sentences about what the speaker said.",
+      building: "Listen to a short talk or episode, then write 5 sentences about what the speaker said.",
+      exam: "Listen to a short talk or episode, then write 5 sentences about what the speaker said.",
+    },
     writing: {
       foundation: "Write a short paragraph (100-150 words), then compare with the model answer.",
       building: "Write a 250-word answer or a precis, then compare with the model answer.",
@@ -62,22 +73,12 @@ export function getStepFallbackDescription(key: StepKey, stage: StageId): string
       building: "Practice an IELTS Part 1 and Part 2 (cue card) speaking task.",
       exam: "Do a full IELTS mock speaking test (Parts 1, 2, and 3).",
     },
-    extra: {
-      foundation: "Visit today's recommended free resource (optional on weekdays, required on Sunday).",
-      building: "Visit today's recommended free resource (optional on weekdays, required on Sunday).",
-      exam: "Visit today's recommended free resource (optional on weekdays, required on Sunday).",
-    },
-    endOfDay: {
-      foundation: "See today's scores and mistakes, and tomorrow's focus.",
-      building: "See today's scores and mistakes, and tomorrow's focus.",
-      exam: "See today's scores and mistakes, and tomorrow's focus.",
-    },
   };
   return byStage[key][stage];
 }
 
-// Pulls a short, real description from the day's content file when one
-// exists, otherwise falls back to the generic by-stage text above.
+// Pulls a short, real one-line description from the day's content file
+// when one exists, otherwise falls back to the generic by-stage text.
 export function getStepDescription(
   key: StepKey,
   stage: StageId,
@@ -91,58 +92,26 @@ export function getStepDescription(
     case "grammar":
       return content.grammar.topic;
     case "reading":
-      return `Passage: read it, answer 5 questions, then write a summary.`;
+      return `Today's article, plus a built-in passage and 5 questions.`;
     case "vocabulary":
       return `${content.vocabulary.length} new words today.`;
+    case "listen":
+      return `${content.listen.channel}: ${content.listen.theme} (${content.listen.minMinutes} min)`;
     case "writing":
       return content.writing.prompt;
     case "speaking":
       return content.speaking.prompt;
-    case "extra":
-      return content.extra.task;
     default:
       return getStepFallbackDescription(key, stage);
   }
 }
 
-export type StepStatus = "done" | "active" | "locked";
-
-export interface StepState extends StepDef {
-  done: boolean;
-  // false only for "extra" on a non-Sunday: it can be skipped without
-  // blocking the rest of the day.
-  required: boolean;
-  status: StepStatus;
+export function countDoneTasks(progress: DailyProgress | undefined): number {
+  if (!progress) return 0;
+  return STEP_ORDER.filter((s) => progress[s.taskField]).length;
 }
 
-// Builds the ordered list of today's 9 steps with their lock state, given
-// today's progress record (or undefined if nothing has been touched yet).
-// A step that isn't required (the weekday "extra") doesn't block the next
-// step from becoming active even while it's still undone — but it still
-// shows as "active" itself first, since getActiveStep() always returns
-// the earliest active step in order, with a "Skip for today" option.
-export function buildStepStates(date: string, progress: DailyProgress | undefined): StepState[] {
-  let previousDone = true; // step 1 is always unlocked
-
-  return STEP_ORDER.map((def) => {
-    const done = progress ? progress[def.taskField] : false;
-    const required = def.key !== "extra" || isExtraRequired(date);
-
-    const status: StepStatus = done ? "done" : previousDone ? "active" : "locked";
-    // Only clears for the next step if this one was actually reachable
-    // (previousDone) AND either done, or not required (skippable). A
-    // locked, non-required step must stay locked — it doesn't un-block
-    // the chain just because it's optional.
-    previousDone = previousDone && (done || !required);
-
-    return { ...def, done, required, status };
-  });
-}
-
-export function getActiveStep(states: StepState[]): StepState | null {
-  return states.find((s) => s.status === "active") ?? null;
-}
-
-export function isDayFullyDone(states: StepState[]): boolean {
-  return states.every((s) => s.done || !s.required);
+export function isDayFullyDone(progress: DailyProgress | undefined): boolean {
+  if (!progress) return false;
+  return STEP_ORDER.every((s) => progress[s.taskField]);
 }

@@ -1,0 +1,84 @@
+{
+  "day": 4,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "present simple tense verb forms", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Verbs: the present simple tense",
+    "rule": "Use the present simple tense for habits, routines, and facts. With 'I/you/we/they', use the base verb (I go). With 'he/she/it', add -s or -es (She goes). Do not mix tenses within one sentence about the same time.",
+    "examples": [
+      "I go to school every day.",
+      "She goes to school every day. (verb + s for he/she/it)",
+      "They play cricket on Sundays.",
+      "He watches the news every evening. (watch + es, because it ends in -ch)"
+    ],
+    "odiaNote": "Odia verbs change based on the subject in a different way than English, and Odia speakers often forget to add -s/-es for 'he/she/it' in the present simple, saying 'She go to school' instead of 'She goes to school.' They also sometimes mix present and past tense in the same sentence because Odia tense markers work differently.",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Fill the blank: 'She ___ (go) to the market every Sunday.'", "answer": "goes", "explanation": "With 'she', the present simple verb takes -es: 'goes'." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'They ___ (play) cricket every evening.'", "answer": "play", "explanation": "With 'they' (plural), the base verb is used without -s: 'play'." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'He ___ (watch) television after dinner.'", "answer": "watches", "explanation": "Verbs ending in -ch, -sh, -ss, -x add -es: 'watch' becomes 'watches'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'She go to school every day.'", "answer": "She goes to school every day.", "explanation": "With 'she', the verb must take -s/-es: 'goes', not 'go'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'My father work in a bank.'", "answer": "My father works in a bank.", "explanation": "'Father' is 'he', so the verb needs -s: 'works', not 'work'." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'Yesterday, I go to the market.'", "answer": "Yesterday, I went to the market.", "explanation": "'Yesterday' signals the past, so the verb must be past tense 'went', not present 'go'." },
+      { "type": "rewrite", "prompt": "Rewrite using 'he' instead of 'I': 'I study English every night.'", "answer": "He studies English every night.", "explanation": "Changing the subject to 'he' requires adding -ies to 'study' (y changes to i before -es)." },
+      { "type": "translate", "prompt": "Write in English: subject 'my mother', verb 'cooks', object 'rice', time 'every morning'.", "answer": "My mother cooks rice every morning.", "explanation": "'Mother' is 'she', so the verb 'cook' takes -s: 'cooks'." }
+    ]
+  },
+  "reading": {
+    "passage": "Biraja wakes up at five o'clock every morning, long before the rest of her family. She lights the stove, boils water for tea, and starts preparing breakfast while her children are still asleep. After breakfast, she walks her younger son to the bus stop before going to her own job at a small tailoring shop. Biraja sews clothes for customers from the village and nearby towns, and she has been doing this work for over fifteen years. She says that her daily routine never really changes, but she does not mind, because the structure helps her manage both her home and her work without feeling confused. Her husband works at a government office and leaves the house around nine o'clock, after she has already finished most of her morning chores. In the evening, Biraja checks her children's homework, even though her own English is limited, because she believes that showing interest matters more than knowing every answer herself. She often tells her daughter that consistency, more than talent, is what helps a person improve at anything, whether it is sewing, cooking, or learning a new language.",
+    "wordCount": 204,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["A tailoring shop in a village", "Biraja's daily routine and her view on consistency", "A government office worker", "Children doing homework"], "correctIndex": 1, "explanations": ["The shop is only part of her routine, not the main topic.", "Correct - the passage follows her daily schedule and her belief in consistency.", "Her husband's job is mentioned briefly, not the focus.", "Homework checking is one detail, not the main idea."] },
+      { "type": "detail", "prompt": "What is Biraja's job?", "options": ["She works at a government office", "She is a tailor", "She is a teacher", "She sells vegetables"], "correctIndex": 1, "explanations": ["That is her husband's job, not hers.", "Correct - the passage states she sews clothes at a tailoring shop.", "She is not described as a teacher.", "Vegetable selling is not mentioned."] },
+      { "type": "inference", "prompt": "Why does Biraja check her children's homework even though her English is limited?", "options": ["She secretly knows perfect English", "She believes showing interest matters more than knowing every answer", "She wants to correct every mistake", "The school requires it"], "correctIndex": 1, "explanations": ["The passage says her English is limited, not that she secretly knows it well.", "Correct - this is stated directly as her reason.", "The passage doesn't say she corrects every mistake.", "There's no mention of a school requirement."] },
+      { "type": "tone", "prompt": "What is the tone of the passage toward Biraja's daily life?", "options": ["Pitying", "Respectful and admiring of her discipline", "Critical of her routine", "Humorous"], "correctIndex": 1, "explanations": ["The passage does not express pity.", "Correct - the passage presents her consistent routine and values positively.", "There is no criticism of her routine.", "There is no humour in the description."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'consistency' means:", "options": ["Doing something the same way, regularly, over time", "Being very fast at something", "Having a lot of money", "Working only on weekends"], "correctIndex": 0, "explanations": ["Correct - 'consistency' here means steady, regular effort over time.", "Speed is not what the word refers to.", "Money is not related to this meaning.", "The passage doesn't limit this to weekends."] }
+    ],
+    "summaryKeyPoints": [
+      "Biraja follows a strict daily routine, waking at five and managing both home and work.",
+      "She works as a tailor and has done this job for over fifteen years.",
+      "Her husband works at a government office with a later daily schedule.",
+      "She checks her children's homework despite her own limited English.",
+      "She believes consistency matters more than talent for improving at anything."
+    ],
+    "modelSummary": "Biraja wakes early every day to manage household chores before going to her job as a tailor, a routine she has kept for over fifteen years. Despite her own limited English, she checks her children's homework because she believes showing interest matters more than having every answer. She tells her daughter that consistency, more than talent, is the key to improving at any skill."
+  },
+  "vocabulary": [
+    { "word": "habit", "partOfSpeech": "noun", "meaningEnglish": "something you do regularly, often without thinking", "meaningHindi": "आदत", "meaningOdia": "ଅଭ୍ୟାସ", "rootOrTrick": "Think of clothes you 'habitually' wear - a habit fits you like a familiar outfit.", "examples": ["Reading every night is a good habit.", "She has a habit of checking her notes before sleeping."], "synonyms": ["routine", "custom"], "antonyms": [] },
+    { "word": "routine", "partOfSpeech": "noun", "meaningEnglish": "a regular, fixed way of doing things", "meaningHindi": "दैनिक क्रम", "meaningOdia": "ନିତ୍ୟକର୍ମ", "rootOrTrick": "From 'route' - a routine is the fixed 'route' your day follows.", "examples": ["My morning routine includes English practice.", "His daily routine never changes."], "synonyms": ["schedule", "pattern"], "antonyms": [] },
+    { "word": "schedule", "partOfSpeech": "noun", "meaningEnglish": "a plan of times for events or tasks", "meaningHindi": "समय सारणी", "meaningOdia": "ସମୟସୁଚୀ", "rootOrTrick": "Picture a 'schedule' as a list of 'scheduled' time slots.", "examples": ["My study schedule starts at 7 a.m.", "The train schedule changed yesterday."], "synonyms": ["timetable", "plan"], "antonyms": [] },
+    { "word": "punctual", "partOfSpeech": "adjective", "meaningEnglish": "arriving or doing things at the right time", "meaningHindi": "समयनिष्ठ", "meaningOdia": "ସମୟନିଷ୍ଠ", "rootOrTrick": "From 'point' (punctum) - being exactly on the 'point' of time.", "examples": ["She is always punctual for class.", "Being punctual shows respect for others' time."], "synonyms": ["on time", "prompt"], "antonyms": ["late"] },
+    { "word": "organize", "partOfSpeech": "verb", "meaningEnglish": "to arrange things in an orderly way", "meaningHindi": "व्यवस्थित करना", "meaningOdia": "ସଂଗଠିତ କରିବା", "rootOrTrick": "Think of 'organs' working together as one organized system.", "examples": ["She organizes her notes every weekend.", "They organized a small speaking group."], "synonyms": ["arrange", "plan"], "antonyms": ["disorganize"] },
+    { "word": "prepare", "partOfSpeech": "verb", "meaningEnglish": "to make ready for something", "meaningHindi": "तैयार करना", "meaningOdia": "ପ୍ରସ୍ତୁତ କରିବା", "rootOrTrick": "'Pre-' (before) + 'pare' (make ready) - get ready before something happens.", "examples": ["He prepares breakfast every morning.", "I need to prepare for tomorrow's test."], "synonyms": ["get ready"], "antonyms": [] },
+    { "word": "journey", "partOfSpeech": "noun", "meaningEnglish": "an act of travelling from one place to another", "meaningHindi": "यात्रा", "meaningOdia": "ଯାତ୍ରା", "rootOrTrick": "From French 'journée' (a day's travel) - originally meant one day's trip.", "examples": ["The journey to Puri takes three hours.", "Learning English is a long journey."], "synonyms": ["trip", "voyage"], "antonyms": [] },
+    { "word": "destination", "partOfSpeech": "noun", "meaningEnglish": "the place someone is travelling to", "meaningHindi": "गंतव्य", "meaningOdia": "ଲକ୍ଷ୍ୟସ୍ଥଳ", "rootOrTrick": "'Destine' (fated) + '-ation' - the place you are 'destined' to reach.", "examples": ["Puri is a popular tourist destination.", "We finally reached our destination."], "synonyms": ["goal", "endpoint"], "antonyms": ["starting point"] },
+    { "word": "ticket", "partOfSpeech": "noun", "meaningEnglish": "a small paper or card that allows entry or travel", "meaningHindi": "टिकट", "meaningOdia": "ଟିକେଟ୍", "rootOrTrick": "Think of a small 'tick' mark proving you paid - a ticket is your proof.", "examples": ["She bought a train ticket.", "Don't lose your ticket."], "synonyms": ["pass"], "antonyms": [] },
+    { "word": "delay", "partOfSpeech": "noun", "meaningEnglish": "a period of waiting because something is late", "meaningHindi": "देरी", "meaningOdia": "ବିଳମ୍ବ", "rootOrTrick": "'De-' + 'lay' (lay aside) - the task is laid aside for later.", "examples": ["The train arrived after a two-hour delay.", "There was a delay in starting the class."], "synonyms": ["postponement"], "antonyms": [] }
+  ],
+  "listen": { "theme": "morning routines around the world", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Describe your typical daily routine from morning to night. Mention at least 4 activities in the order you do them.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "I wake up at six o'clock every morning and prepare for school. After breakfast, I walk to the bus stop and reach school by eight. My classes continue until three in the afternoon, and I usually study English for one hour after returning home. In the evening, I help my mother with small household chores and then complete my homework before dinner. My daily routine does not change much, but I do not mind, because it helps me stay organized and punctual. Before sleeping, I review the new words I learned that day. I believe consistency, more than talent, is what helps a person improve over time.",
+    "selfCheckList": [
+      "Did I mention at least 4 activities in order?",
+      "Did I use present simple tense correctly (goes, works, studies)?",
+      "Did I use at least 2 of today's new words?",
+      "Did I avoid mixing past and present tense?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "shadowing",
+    "prompt": "Read this aloud slowly, then at normal speed: 'My daily routine never really changes, but I do not mind, because it helps me manage my time without feeling confused.'",
+    "modelAnswerText": "My daily routine never really changes, but I do not mind, because it helps me manage my time without feeling confused.",
+    "minSeconds": 20,
+    "selfCheckList": [
+      "Did I pronounce 'routine' clearly?",
+      "Did I pause slightly at the comma?",
+      "Did I keep a steady speed without long gaps?",
+      "Did my sentence last at least 20 seconds?"
+    ]
+  }
+}

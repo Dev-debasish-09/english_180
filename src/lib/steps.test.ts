@@ -1,89 +1,44 @@
 import { describe, expect, it } from "vitest";
 import type { DailyProgress } from "../db/types";
-import { buildStepStates, getActiveStep, isDayFullyDone, STEP_ORDER } from "./steps";
+import { countDoneTasks, isDayFullyDone, STEP_ORDER } from "./steps";
 
-const SUNDAY = "2023-01-01"; // extra is required this day
-const MONDAY = "2023-01-02"; // extra is optional this day
-
-function emptyProgress(date: string): DailyProgress {
+function emptyProgress(): DailyProgress {
   return {
-    date,
+    date: "2026-01-01",
     dayNumber: 1,
     warmupDone: false,
     watchDone: false,
     grammarDone: false,
     readingDone: false,
     vocabularyDone: false,
+    listenDone: false,
     writingDone: false,
     speakingDone: false,
-    extraDone: false,
-    endOfDayDone: false,
   };
 }
 
-describe("task locking", () => {
-  it("with no progress, only the first step is active and the rest are locked", () => {
-    const states = buildStepStates(MONDAY, undefined);
-    expect(states[0].status).toBe("active");
-    for (const s of states.slice(1)) {
-      expect(s.status).toBe("locked");
-    }
+describe("task completion (no locking)", () => {
+  it("there are exactly 8 tasks", () => {
+    expect(STEP_ORDER.length).toBe(8);
   });
 
-  it("finishing a step unlocks exactly the next one", () => {
-    const progress = { ...emptyProgress(MONDAY), warmupDone: true };
-    const states = buildStepStates(MONDAY, progress);
-    expect(states[0].status).toBe("done");
-    expect(states[1].status).toBe("active");
-    expect(states[2].status).toBe("locked");
+  it("counts 0 done tasks with no progress", () => {
+    expect(countDoneTasks(undefined)).toBe(0);
+    expect(countDoneTasks(emptyProgress())).toBe(0);
   });
 
-  it("cannot skip ahead: the mentor screen still points at the earliest unfinished step", () => {
-    // grammarDone is true but warmup never happened. The UI only ever
-    // acts on getActiveStep(), so it must still point at warmup, not
-    // let the user jump to (or past) grammar out of order.
-    const progress = { ...emptyProgress(MONDAY), grammarDone: true };
-    const states = buildStepStates(MONDAY, progress);
-    expect(getActiveStep(states)?.key).toBe("warmup");
+  it("counts done tasks regardless of order", () => {
+    const progress = { ...emptyProgress(), speakingDone: true, warmupDone: true };
+    expect(countDoneTasks(progress)).toBe(2);
   });
 
-  it("on a weekday, extra is not required and doesn't block end-of-day from becoming active", () => {
-    const allButExtra = STEP_ORDER.filter((s) => s.key !== "extra" && s.key !== "endOfDay").reduce(
-      (acc, def) => ({ ...acc, [def.taskField]: true }),
-      emptyProgress(MONDAY),
-    );
-    const states = buildStepStates(MONDAY, allButExtra);
-    const extra = states.find((s) => s.key === "extra")!;
-    const endOfDay = states.find((s) => s.key === "endOfDay")!;
-    expect(extra.required).toBe(false);
-    expect(extra.status).toBe("active"); // still offered, just skippable
-    expect(endOfDay.status).toBe("active"); // not blocked by the skippable extra step
-    expect(getActiveStep(states)?.key).toBe("extra"); // but the mentor screen shows extra first
-  });
+  it("a day is fully done only once all 8 tasks are true", () => {
+    expect(isDayFullyDone(emptyProgress())).toBe(false);
 
-  it("on a Sunday, extra is required and blocks end-of-day until done", () => {
-    const allButExtra = STEP_ORDER.filter((s) => s.key !== "extra" && s.key !== "endOfDay").reduce(
-      (acc, def) => ({ ...acc, [def.taskField]: true }),
-      emptyProgress(SUNDAY),
-    );
-    const states = buildStepStates(SUNDAY, allButExtra);
-    const extra = states.find((s) => s.key === "extra")!;
-    const endOfDay = states.find((s) => s.key === "endOfDay")!;
-    expect(extra.required).toBe(true);
-    expect(endOfDay.status).toBe("locked");
-  });
-
-  it("a day is only fully done once every required step is done", () => {
     const allDone = STEP_ORDER.reduce(
       (acc, def) => ({ ...acc, [def.taskField]: true }),
-      emptyProgress(MONDAY),
+      emptyProgress(),
     );
-    const states = buildStepStates(MONDAY, allDone);
-    expect(isDayFullyDone(states)).toBe(true);
-  });
-
-  it("a day is not done while a required step is missing", () => {
-    const states = buildStepStates(MONDAY, emptyProgress(MONDAY));
-    expect(isDayFullyDone(states)).toBe(false);
+    expect(isDayFullyDone(allDone)).toBe(true);
   });
 });

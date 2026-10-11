@@ -1,24 +1,11 @@
 import type { DailyProgress, TaskKey } from "../db/types";
-import { addDays, isExtraRequired, toISODate, parseISODate } from "./date";
+import { addDays, toISODate, parseISODate } from "./date";
+import { countDoneTasks, STEP_ORDER } from "./steps";
 
-const ALL_TASK_FIELDS: TaskKey[] = [
-  "warmupDone",
-  "watchDone",
-  "grammarDone",
-  "readingDone",
-  "vocabularyDone",
-  "writingDone",
-  "speakingDone",
-  "extraDone",
-  "endOfDayDone",
-];
-
-// How many of the day's 9 steps are done, and how many were required
-// (8, or 9 on a Sunday when "extra" is required too).
+// How many of the day's 8 tasks are done (out of 8 - there's no longer
+// an optional/required distinction between tasks).
 export function countStepsDone(rec: DailyProgress): { done: number; required: number } {
-  const done = ALL_TASK_FIELDS.filter((f) => rec[f]).length;
-  const required = isExtraRequired(rec.date) ? 9 : 8;
-  return { done, required };
+  return { done: countDoneTasks(rec), required: STEP_ORDER.length };
 }
 
 // Counts consecutive completed days ending today (or ending yesterday,

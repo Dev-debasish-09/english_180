@@ -1,0 +1,84 @@
+{
+  "day": 5,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "articles a an the", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Articles: a / an",
+    "rule": "Use 'a' before a word that starts with a consonant sound, and 'an' before a word that starts with a vowel sound (a, e, i, o, u). Use 'a/an' for one unspecified, general thing you are mentioning for the first time.",
+    "examples": [
+      "I saw a dog in the park.",
+      "She bought an apple and a banana.",
+      "He is an honest man. (starts with a vowel SOUND, 'h' is silent)",
+      "I need a university degree. (starts with a consonant SOUND 'yoo', even though 'u' is a vowel letter)"
+    ],
+    "odiaNote": "Odia has no articles like 'a' or 'an' at all, so Odia speakers often skip them completely in English, saying 'I saw dog' instead of 'I saw a dog.' This is one of the most common and noticeable mistakes for Odia speakers.",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Fill the blank: 'I ate ___ orange this morning.'", "answer": "an", "explanation": "'Orange' starts with a vowel sound, so 'an' is used." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'She is ___ teacher.'", "answer": "a", "explanation": "'Teacher' starts with a consonant sound, so 'a' is used." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'He is ___ honest man.'", "answer": "an", "explanation": "'Honest' starts with a silent 'h', so the next sound is the vowel 'o' - use 'an'." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'I need ___ umbrella because it is raining.'", "answer": "an", "explanation": "'Umbrella' starts with a vowel sound, so 'an' is used." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'I saw dog in the park.'", "answer": "I saw a dog in the park.", "explanation": "English needs 'a' before a general, unspecified singular noun like 'dog'; Odia has no equivalent word, so it is often left out." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'She is engineer.'", "answer": "She is an engineer.", "explanation": "'Engineer' starts with a vowel sound, so 'an' must come before it - it cannot be left out." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'He wants to buy a apple.'", "answer": "He wants to buy an apple.", "explanation": "'Apple' starts with a vowel sound, so it needs 'an', not 'a'." },
+      { "type": "translate", "prompt": "Write in English: 'I have a cat and an old book.' (make sure both articles are correct)", "answer": "I have a cat and an old book.", "explanation": "'Cat' starts with a consonant sound ('a'), and 'old' starts with a vowel sound ('an')." }
+    ]
+  },
+  "reading": {
+    "passage": "Learning articles like 'a', 'an', and 'the' is one of the hardest parts of English for many Indian language speakers, because most Indian languages, including Odia, do not use words like this at all. A language researcher named Dr. Kavita Rao studied this problem among students in eastern India and found that even advanced learners often skip articles without noticing, especially when speaking quickly. She explained that the brain of a native Odia speaker is not trained to expect a short word before every noun, so the article simply does not come to mind in the moment. Dr. Rao's advice to learners is not to try to memorize a long list of grammar rules all at once, but to notice articles while reading and to practice saying full sentences out loud, including the articles, every day. She also recommends keeping a small notebook of sentences where a learner has forgotten an article, and reading those corrected sentences aloud several times. According to her research, students who practiced this way for just ten minutes a day showed noticeable improvement within six weeks, even though they had struggled with the same mistake for years before starting the exercise.",
+    "wordCount": 212,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["Dr. Kavita Rao's career", "Why Odia speakers struggle with articles, and how to improve", "A list of English grammar rules", "Indian languages in general"], "correctIndex": 1, "explanations": ["Her career is not the focus; her research findings are.", "Correct - the passage explains the cause of the article mistake and a practical fix.", "The passage gives advice, not a long rule list.", "Indian languages are mentioned only as context."] },
+      { "type": "detail", "prompt": "What does Dr. Rao recommend keeping?", "options": ["A grammar textbook", "A notebook of sentences where an article was forgotten", "A dictionary", "A speaking schedule"], "correctIndex": 1, "explanations": ["A textbook is not mentioned as her recommendation.", "Correct - this is stated directly in the passage.", "A dictionary is not mentioned.", "A schedule is not mentioned as her specific advice."] },
+      { "type": "inference", "prompt": "Why does Dr. Rao say articles 'do not come to mind' for Odia speakers?", "options": ["Because they are lazy", "Because their language doesn't use similar words, so their brain isn't trained to expect them", "Because English is a difficult language overall", "Because they don't study enough"], "correctIndex": 1, "explanations": ["The passage does not suggest laziness as the cause.", "Correct - this is her explanation, based on language background, not effort or ability.", "The passage is specific to articles, not English difficulty in general.", "The passage does not blame insufficient study."] },
+      { "type": "tone", "prompt": "What is the tone of the passage toward learners who struggle with articles?", "options": ["Blaming", "Understanding and practical", "Dismissive", "Mocking"], "correctIndex": 1, "explanations": ["The passage does not blame learners for the mistake.", "Correct - the passage explains the cause sympathetically and offers a realistic solution.", "The advice given shows the opposite of dismissiveness.", "There is no mocking tone anywhere."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'noticeable' means:", "options": ["Loud", "Easy to notice or see", "Expensive", "Slow"], "correctIndex": 1, "explanations": ["Loudness is unrelated to this meaning.", "Correct - 'noticeable improvement' means improvement that can clearly be seen.", "Cost is not related to this word.", "Speed is not what this word describes."] }
+    ],
+    "summaryKeyPoints": [
+      "Many Indian language speakers, including Odia speakers, struggle with English articles because their own languages don't use similar words.",
+      "Dr. Kavita Rao found that even advanced learners skip articles, especially when speaking fast.",
+      "Her advice: notice articles while reading, and practice saying full sentences aloud daily, rather than memorizing rules.",
+      "She recommends a notebook of corrected sentences where an article was forgotten.",
+      "Students practicing 10 minutes daily showed noticeable improvement within six weeks."
+    ],
+    "modelSummary": "Dr. Kavita Rao's research explains that Odia and other Indian-language speakers often skip English articles like 'a' and 'an' because their own languages don't use equivalent words, so their brains aren't trained to expect them. Rather than memorizing grammar rules, she recommends noticing articles while reading and keeping a notebook of corrected sentences, read aloud daily. Students who practiced this for ten minutes a day showed clear improvement within six weeks."
+  },
+  "vocabulary": [
+    { "word": "opinion", "partOfSpeech": "noun", "meaningEnglish": "what a person thinks or believes about something", "meaningHindi": "विचार/राय", "meaningOdia": "ମତ", "rootOrTrick": "From 'opinari' (to think/believe) - what you personally believe.", "examples": ["In my opinion, daily practice is essential.", "She shared her opinion about the book."], "synonyms": ["view", "belief"], "antonyms": ["fact"] },
+    { "word": "argument", "partOfSpeech": "noun", "meaningEnglish": "a reason given to support an idea, or a disagreement", "meaningHindi": "तर्क/बहस", "meaningOdia": "ତର୍କ", "rootOrTrick": "From 'arguere' (to make clear) - making your reasoning clear.", "examples": ["Her argument convinced the teacher.", "They had an argument about the plan."], "synonyms": ["reasoning", "dispute"], "antonyms": ["agreement"] },
+    { "word": "convince", "partOfSpeech": "verb", "meaningEnglish": "to make someone believe something is true", "meaningHindi": "विश्वास दिलाना", "meaningOdia": "ବିଶ୍ୱାସ କରାଇବା", "rootOrTrick": "'Con-' (completely) + 'vince' (conquer) - to completely win someone over.", "examples": ["He convinced his friend to join the class.", "The evidence convinced the jury."], "synonyms": ["persuade"], "antonyms": ["dissuade"] },
+    { "word": "agree", "partOfSpeech": "verb", "meaningEnglish": "to have the same opinion as someone", "meaningHindi": "सहमत होना", "meaningOdia": "ସମ୍ମତ ହେବା", "rootOrTrick": "'A-' + 'gree' (pleasing) - to be in agreeable, pleasing harmony.", "examples": ["I agree with your plan.", "They agreed to meet on Sunday."], "synonyms": ["concur"], "antonyms": ["disagree"] },
+    { "word": "disagree", "partOfSpeech": "verb", "meaningEnglish": "to have a different opinion than someone", "meaningHindi": "असहमत होना", "meaningOdia": "ଅସମ୍ମତ ହେବା", "rootOrTrick": "'Dis-' (not) + 'agree' - the opposite of agreeing.", "examples": ["I disagree with that idea.", "They disagreed about the schedule."], "synonyms": ["differ"], "antonyms": ["agree"] },
+    { "word": "compare", "partOfSpeech": "verb", "meaningEnglish": "to look at two things to see how they are similar or different", "meaningHindi": "तुलना करना", "meaningOdia": "ତୁଳନା କରିବା", "rootOrTrick": "'Com-' (together) + 'pare' (equal) - putting two things together to see if they're equal.", "examples": ["Compare the two essays and choose the better one.", "She compared her old writing with her new writing."], "synonyms": ["contrast"], "antonyms": [] },
+    { "word": "similar", "partOfSpeech": "adjective", "meaningEnglish": "almost the same as something else", "meaningHindi": "समान", "meaningOdia": "ସମାନ", "rootOrTrick": "From 'similis' (like) - things that are 'like' each other.", "examples": ["Her handwriting is similar to her sister's.", "The two villages have a similar market system."], "synonyms": ["alike", "comparable"], "antonyms": ["different"] },
+    { "word": "different", "partOfSpeech": "adjective", "meaningEnglish": "not the same as something else", "meaningHindi": "अलग", "meaningOdia": "ଭିନ୍ନ", "rootOrTrick": "'Dif-' (apart) + 'fer' (carry) - carried apart from each other.", "examples": ["Her opinion is different from mine.", "Each village has a different tradition."], "synonyms": ["distinct"], "antonyms": ["similar"] },
+    { "word": "advantage", "partOfSpeech": "noun", "meaningEnglish": "something that helps you or gives a benefit", "meaningHindi": "लाभ", "meaningOdia": "ସୁବିଧା", "rootOrTrick": "'Ad-' (toward) + 'vantage' (position) - a position that works toward your benefit.", "examples": ["Knowing English is an advantage for this job.", "There are many advantages to reading daily."], "synonyms": ["benefit"], "antonyms": ["disadvantage"] },
+    { "word": "disadvantage", "partOfSpeech": "noun", "meaningEnglish": "something that causes a difficulty or harm", "meaningHindi": "नुकसान", "meaningOdia": "ଅସୁବିଧା", "rootOrTrick": "'Dis-' (not) + 'advantage' - the opposite of a benefit.", "examples": ["Not knowing articles is a disadvantage while writing exams.", "Every plan has some disadvantages."], "synonyms": ["drawback"], "antonyms": ["advantage"] }
+  ],
+  "listen": { "theme": "why some languages are harder to learn than others", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Write a paragraph giving your opinion: should students learn a new language starting from childhood? Give at least one reason for your opinion.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "In my opinion, students should start learning a new language from childhood, because young children learn sounds and grammar more naturally than adults. I disagree with people who say it is better to wait until a child is older, since early exposure gives a clear advantage later in life. For example, a child who hears English regularly from a young age often finds articles like 'a' and 'an' easier to use correctly, even without memorizing rules. There is a disadvantage too: young children may mix up two languages for a short time. However, I believe this small difficulty is similar to any normal part of learning, and it fades quickly with practice.",
+    "selfCheckList": [
+      "Did I clearly state my opinion?",
+      "Did I give at least one reason?",
+      "Did I use at least 2 of today's new words?",
+      "Did I check my articles (a, an) carefully?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "shadowing",
+    "prompt": "Read this aloud slowly, then at normal speed: 'In my opinion, daily practice is more important than memorizing a long list of grammar rules.'",
+    "modelAnswerText": "In my opinion, daily practice is more important than memorizing a long list of grammar rules.",
+    "minSeconds": 20,
+    "selfCheckList": [
+      "Did I say 'a' and 'an' clearly and correctly?",
+      "Did I pause slightly at the comma?",
+      "Did I speak without long gaps?",
+      "Did my sentence last at least 20 seconds?"
+    ]
+  }
+}

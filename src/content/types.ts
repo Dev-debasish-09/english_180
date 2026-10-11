@@ -1,6 +1,4 @@
 // Shape of one day's authored content file: /src/content/day-NNN.json.
-// Phase 1 only defines this schema — the actual day-001.json ... day-180.json
-// files are written in Phase 2 (days 1-30) and Phase 6 (days 31-180).
 
 export interface WatchContent {
   channel: string; // e.g. "Dear Sir", "engVid", "GMAT Ninja"
@@ -20,7 +18,7 @@ export interface GrammarContent {
   rule: string;
   examples: string[];
   odiaNote: string; // the common mistake Odia speakers make here, and why
-  exercises: GrammarExercise[]; // 10-15 items
+  exercises: GrammarExercise[];
 }
 
 export interface ReadingQuestion {
@@ -73,17 +71,10 @@ export interface SpeakingContent {
   selfCheckList: string[];
 }
 
-export type ResourceCategory =
-  | "grammar"
-  | "vocabulary"
-  | "reading"
-  | "gmat"
-  | "upsc"
-  | "ielts";
-
-export interface ExtraContent {
-  task: string;
-  resourceCategory: ResourceCategory;
+export interface ListenContent {
+  theme: string; // e.g. "ordering food at a restaurant"
+  channel: string; // e.g. "BBC 6 Minute English", "TED-Ed"
+  minMinutes: number;
 }
 
 export interface DayContent {
@@ -93,14 +84,14 @@ export interface DayContent {
   grammar: GrammarContent;
   reading: ReadingContent;
   vocabulary: VocabularyWord[];
+  listen: ListenContent;
   writing: WritingContent;
   speaking: SpeakingContent;
-  extra: ExtraContent;
 }
 
 // Loads every day-NNN.json that exists yet. Using eager + import.meta.glob
-// means this works even with zero content files (Phase 1) and needs no
-// changes as files are added in later phases.
+// means this works even with zero content files and needs no changes as
+// files are added in later phases.
 const dayModules = import.meta.glob<{ default: DayContent }>("./day-*.json", {
   eager: true,
 });

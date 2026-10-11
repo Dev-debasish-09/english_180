@@ -1,0 +1,84 @@
+{
+  "day": 7,
+  "stage": "foundation",
+  "watch": { "channel": "Dear Sir", "topic": "prepositions of place in on at", "minMinutes": 12 },
+  "grammar": {
+    "topic": "Prepositions of place: in, on, at",
+    "rule": "Use 'in' for enclosed spaces or larger areas (in a room, in a city). Use 'on' for surfaces (on the table, on the wall). Use 'at' for specific points or addresses (at the door, at 10 Main Street). These small words change meaning completely, so choosing the wrong one is a common and noticeable mistake.",
+    "examples": [
+      "The book is on the table.",
+      "She lives in Bhubaneswar.",
+      "He is waiting at the bus stop.",
+      "The keys are in my bag, on the chair, at the corner of the room."
+    ],
+    "odiaNote": "Odia uses postpositions (words that come after the noun, like 'uporaku' or 'bhitare') instead of English prepositions that come before the noun, and the categories don't map one-to-one onto in/on/at. This causes Odia speakers to often choose the wrong preposition, or use 'in' for everything.",
+    "exercises": [
+      { "type": "fill-blank", "prompt": "Fill the blank: 'The cat is sleeping ___ the bed.'", "answer": "on", "explanation": "'On' is used for a surface - the bed's surface." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'She was born ___ Cuttack.'", "answer": "in", "explanation": "'In' is used for cities and larger areas." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'Meet me ___ the school gate at 5 o'clock.'", "answer": "at", "explanation": "'At' is used for a specific point, like a gate or meeting spot." },
+      { "type": "fill-blank", "prompt": "Fill the blank: 'There is a picture ___ the wall.'", "answer": "on", "explanation": "A wall is a surface, so 'on' is used." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'I live at Bhubaneswar.'", "answer": "I live in Bhubaneswar.", "explanation": "Cities use 'in', not 'at' - 'at' is for a specific point, not a whole city." },
+      { "type": "correct-error", "prompt": "Correct this sentence: 'The paper is in the desk.' (meaning it is lying on top of the desk)", "answer": "The paper is on the desk.", "explanation": "If the paper is on the surface of the desk, 'on' is correct; 'in the desk' would mean inside a drawer." },
+      { "type": "rewrite", "prompt": "Rewrite correctly: 'He is standing at the door of the classroom at the inside.'", "answer": "He is standing at the door of the classroom.", "explanation": "'At the door' already correctly describes the specific point; the extra phrase 'at the inside' is incorrect and unnecessary." },
+      { "type": "translate", "prompt": "Write in English: subject 'the teacher', verb 'is sitting', place 'at the front of the room'.", "answer": "The teacher is sitting at the front of the room.", "explanation": "'At the front' describes a specific point within the room, so 'at' is correct." }
+    ]
+  },
+  "reading": {
+    "passage": "Prepositions are often called 'small words with big problems' by English teachers, because a single wrong preposition can completely confuse the meaning of a sentence, even when every other word is correct. Rakesh, a trainer who teaches spoken English to call-centre employees in Bhubaneswar, says that prepositions of place - in, on, and at - cause more daily mistakes among his students than almost any other grammar point. He explains that Odia, like many Indian languages, does not divide space into these three exact categories, so learners naturally guess which preposition sounds right, and the guess is wrong about as often as it is right. Rakesh's method is unusual: instead of teaching long lists of rules, he asks students to physically point at objects in the room and say a full sentence about each one, such as 'The phone is on the table' or 'The file is in the drawer.' He believes that connecting the words to real, visible objects helps the brain remember the correct preposition far better than reading a rule in a textbook. After a few weeks of this daily practice, most of his students stop needing to pause and think before choosing between in, on, and at, because the correct word starts to feel automatic rather than memorized.",
+    "wordCount": 215,
+    "questions": [
+      { "type": "main-idea", "prompt": "What is the passage mainly about?", "options": ["Call centres in Bhubaneswar", "Why prepositions of place are hard for Odia speakers, and a method to learn them", "A list of preposition rules", "Rakesh's career history"], "correctIndex": 1, "explanations": ["Call centres are just the work setting, not the topic.", "Correct - the passage explains the cause of the mistake and Rakesh's teaching method.", "The passage describes a method, not a rule list.", "His career is mentioned only briefly."] },
+      { "type": "detail", "prompt": "What does Rakesh ask his students to do?", "options": ["Memorize long grammar rules", "Point at objects in the room and say full sentences about them", "Write essays about prepositions", "Watch grammar videos only"], "correctIndex": 1, "explanations": ["The passage says he avoids long rule lists.", "Correct - this is stated directly as his method.", "Essay writing is not mentioned.", "Videos are not mentioned as his method."] },
+      { "type": "inference", "prompt": "Why does Rakesh's method work, according to the passage?", "options": ["Because it is easier than studying", "Because connecting words to real, visible objects helps memory more than reading a rule", "Because students enjoy pointing at things", "Because it takes less time than other methods"], "correctIndex": 1, "explanations": ["Ease is not given as the stated reason.", "Correct - this is explicitly explained as his belief in the passage.", "Enjoyment is not mentioned as the reason it works.", "Time saved is not mentioned."] },
+      { "type": "tone", "prompt": "What is the tone of the passage toward Rakesh's teaching method?", "options": ["Doubtful", "Approving and informative", "Sarcastic", "Angry"], "correctIndex": 1, "explanations": ["The passage does not express doubt about the method.", "Correct - the passage explains and seems to support the method's effectiveness.", "There is no sarcasm in the description.", "There is no anger in the tone."] },
+      { "type": "vocab-in-context", "prompt": "In the passage, 'automatic' means:", "options": ["Done by a machine", "Done without needing to think about it", "Done very slowly", "Done only once"], "correctIndex": 1, "explanations": ["This is not about machines in this context.", "Correct - 'automatic' here means the choice happens naturally, without conscious thought.", "Speed in the slow sense is not what's meant.", "The passage describes a repeated habit, not a one-time action."] }
+    ],
+    "summaryKeyPoints": [
+      "Prepositions of place (in, on, at) cause frequent mistakes for Odia speakers because Odia doesn't divide space the same way.",
+      "Rakesh trains call-centre employees in Bhubaneswar and sees this as a major daily mistake.",
+      "His method: students point at real objects and say full sentences using the correct preposition.",
+      "He believes connecting words to visible objects helps memory more than reading rules.",
+      "After weeks of practice, students start choosing the right preposition automatically."
+    ],
+    "modelSummary": "Rakesh, a spoken-English trainer in Bhubaneswar, says prepositions of place (in, on, at) are a major daily mistake for his students because Odia doesn't divide space into the same three categories. Instead of teaching long rule lists, he has students point at real objects and say full sentences using the correct preposition, believing this connects the words to memory better than reading rules. After weeks of practice, his students begin choosing the correct preposition automatically."
+  },
+  "vocabulary": [
+    { "word": "interview", "partOfSpeech": "noun", "meaningEnglish": "a formal meeting to ask someone questions, often for a job", "meaningHindi": "साक्षात्कार", "meaningOdia": "ସାକ୍ଷାତକାର", "rootOrTrick": "'Inter-' (between) + 'view' - a view/exchange between two people.", "examples": ["She has a job interview tomorrow.", "The interview lasted thirty minutes."], "synonyms": ["meeting"], "antonyms": [] },
+    { "word": "qualification", "partOfSpeech": "noun", "meaningEnglish": "a skill or exam result that shows you can do something", "meaningHindi": "योग्यता", "meaningOdia": "ଯୋଗ୍ୟତା", "rootOrTrick": "From 'qualify' (to become suitable) - proof that you qualify for something.", "examples": ["A degree is a common job qualification.", "She listed her qualifications on the form."], "synonyms": ["credential"], "antonyms": [] },
+    { "word": "experience", "partOfSpeech": "noun", "meaningEnglish": "knowledge or skill gained from doing something over time", "meaningHindi": "अनुभव", "meaningOdia": "ଅନୁଭୂତି", "rootOrTrick": "From 'experiri' (to try) - what you gain by trying things repeatedly.", "examples": ["He has five years of experience in teaching.", "This was a valuable learning experience."], "synonyms": ["practice", "exposure"], "antonyms": [] },
+    { "word": "confident", "partOfSpeech": "adjective", "meaningEnglish": "feeling sure of yourself and your abilities", "meaningHindi": "आत्मविश्वासी", "meaningOdia": "ଆତ୍ମବିଶ୍ୱାସୀ", "rootOrTrick": "'Con-' (with) + 'fid' (trust) - full of trust in yourself.", "examples": ["She felt confident during the interview.", "Practice makes you more confident."], "synonyms": ["self-assured"], "antonyms": ["nervous"] },
+    { "word": "nervous", "partOfSpeech": "adjective", "meaningEnglish": "feeling worried or anxious before something", "meaningHindi": "घबराया हुआ", "meaningOdia": "ଚିନ୍ତିତ", "rootOrTrick": "From 'nerve' - your nerves feel unsettled before something stressful.", "examples": ["He felt nervous before his first interview.", "Don't be nervous, just speak clearly."], "synonyms": ["anxious"], "antonyms": ["confident"] },
+    { "word": "impress", "partOfSpeech": "verb", "meaningEnglish": "to make someone admire or respect you", "meaningHindi": "प्रभावित करना", "meaningOdia": "ପ୍ରଭାବିତ କରିବା", "rootOrTrick": "'Im-' (into) + 'press' - to press a strong, lasting mark into someone's opinion.", "examples": ["She impressed the interviewer with her answers.", "He tried to impress his new teacher."], "synonyms": ["amaze"], "antonyms": ["disappoint"] },
+    { "word": "salary", "partOfSpeech": "noun", "meaningEnglish": "fixed money paid regularly for work, usually monthly", "meaningHindi": "वेतन", "meaningOdia": "ଦରମା", "rootOrTrick": "From Latin 'salarium' (salt-money) - Roman soldiers were once paid partly in salt.", "examples": ["Her salary increased after the promotion.", "He discussed his salary during the interview."], "synonyms": ["wage", "pay"], "antonyms": [] },
+    { "word": "career", "partOfSpeech": "noun", "meaningEnglish": "the series of jobs a person has in their working life", "meaningHindi": "करियर", "meaningOdia": "କରିୟର", "rootOrTrick": "From French 'carriere' (racecourse) - your professional path, like a long race.", "examples": ["She wants a career in teaching.", "He changed his career at the age of thirty."], "synonyms": ["profession"], "antonyms": [] },
+    { "word": "promotion", "partOfSpeech": "noun", "meaningEnglish": "a move to a higher position or rank at work", "meaningHindi": "पदोन्नति", "meaningOdia": "ପଦୋନ୍ନତି", "rootOrTrick": "'Pro-' (forward) + 'motion' (movement) - moving forward in your role.", "examples": ["He got a promotion after five years.", "Hard work often leads to promotion."], "synonyms": ["advancement"], "antonyms": ["demotion"] },
+    { "word": "resign", "partOfSpeech": "verb", "meaningEnglish": "to formally leave a job", "meaningHindi": "इस्तीफा देना", "meaningOdia": "ପଦତ୍ୟାଗ କରିବା", "rootOrTrick": "'Re-' + 'sign' - to 'sign away' your position.", "examples": ["She resigned from her job last month.", "He decided to resign after the disagreement."], "synonyms": ["quit"], "antonyms": ["join"] }
+  ],
+  "listen": { "theme": "how to prepare for a job interview", "channel": "BBC 6 Minute English", "minMinutes": 6 },
+  "writing": {
+    "prompt": "Write a paragraph about a job or career you would like to have in the future. Explain why you want it and what qualifications or experience it needs.",
+    "type": "paragraph",
+    "minWords": 100,
+    "maxWords": 150,
+    "modelAnswer": "In the future, I would like to have a career in the civil services, because I want to work for the government and help improve life in my district. This career needs strong qualifications, including a good academic record and knowledge of subjects like history, geography, and current affairs. It also needs experience in clear writing and confident speaking, since interviews are an important part of the selection process. I know that preparing for this career will take years of steady effort, including daily reading and writing practice. I feel a little nervous when I think about the competition, but I also feel confident that consistent practice, like what I am doing now with English, will help me succeed.",
+    "selfCheckList": [
+      "Did I name a career and explain why I want it?",
+      "Did I mention qualifications or experience needed?",
+      "Did I use at least 2 of today's new words?",
+      "Did I use prepositions (in, on, at) correctly?",
+      "Is my paragraph between 100 and 150 words?"
+    ]
+  },
+  "speaking": {
+    "type": "ielts-part1",
+    "prompt": "Answer in 3-4 sentences: What job would you like to do in the future, and why?",
+    "modelAnswerText": "I would like to work in the civil services in the future. I am interested in this career because I want to help improve life in my district. It requires strong qualifications and a lot of practice in writing and speaking, which is why I am studying every day.",
+    "minSeconds": 25,
+    "selfCheckList": [
+      "Did I name the job clearly?",
+      "Did I give at least one reason?",
+      "Did I use prepositions correctly (in, at)?",
+      "Did I speak for at least 25 seconds?"
+    ]
+  }
+}

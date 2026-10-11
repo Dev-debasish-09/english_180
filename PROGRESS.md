@@ -1,5 +1,69 @@
 # English180 - Progress
 
+## Bug fix + Home screen rebuild (2026-10-11)
+
+**Bug**: the app showed no tasks after the "Why I started" gate was
+added. **Cause**: that gate silently did nothing if you typed under 3
+characters, with no error shown, so you were stuck on the form (which
+didn't look like "tasks"). Fixed by making it a non-blocking banner on
+Home instead of a gate — you can always see and do today's tasks.
+
+**Home screen rebuilt** to a card-based, unlocked design:
+- Top: Day X of 180, date, streak, daily mentor message, "N of 8 tasks
+  done" progress bar.
+- 8 task cards in suggested (not locked) order: Warm-up, Watch, Grammar,
+  Read, Vocabulary, Listen, Write, Speak. "Listen" is new (TED/BBC 6
+  Minute English, 5 sentences about what you heard) and replaces the
+  old "Today's Extra"/"End-of-day card" tasks — end-of-day is now just
+  a state (the "Day complete" card), not its own task to tick.
+- Watch/Read/Listen are "link" tasks: an external link (YouTube search
+  built from that day's channel+topic for Watch/Listen; a fixed
+  per-stage reading-site link for Read) plus a 20-word note that ticks
+  the task once saved. Warm-up/Grammar/Vocabulary/Write/Speak are
+  "in-app" tasks with a dedicated page (`/grammar`, `/vocabulary`,
+  `/writing`, `/speaking`) and a direct checkbox.
+- Bottom: a simple checklist, a "Yesterday" tick row, and a "This week"
+  row, so missed days are visible, not hidden.
+- Locking removed entirely: `src/lib/steps.ts` no longer has
+  locked/active states — `STEP_ORDER` is just the suggested order.
+- `Settings.whyReason`/`whyGoal`/`milestonesSeen`/`notificationTime`
+  are now backfilled onto old settings rows on load (`ensureSettings`),
+  so a stale/partial settings object from an earlier build can never
+  crash the app again — this was the class of bug behind the original
+  report.
+- Dexie bumped to schema v3 (clears `dailyProgress` again — same
+  reasoning as the v2 bump: no real progress data worth preserving at
+  this stage, and the field shape changed).
+
+**Days 1-7 content written** (`src/content/day-001.json` ...
+`day-007.json`) so the app is usable today: Grammar (parts of speech →
+nouns → pronouns → present simple → articles a/an → articles the →
+prepositions of place, each with the matching Odia-mistake note),
+Reading passages (150-250 words, Odisha-set, 5 questions with
+explanations for every option), 10 vocabulary words/day (70 total, no
+repeats, English+Hindi+Odia), Writing prompts + model answers, Speaking
+tasks + model answers, Watch (Dear Sir + topic) and Listen (BBC 6 Minute
+English + theme) metadata for every day. `npm run check:content`
+passes with 0 errors; one honest warning: grammar exercises are 8/day,
+not the ideal 10-15, given the scope of authoring 7 full days in one
+pass — flagging rather than padding with weak filler exercises.
+
+**New pages**: `GrammarPage`, `ReadingPage`, `VocabularyPage` (real
+content, no longer stubs), `WritingPage` (word-count-gated, draft
+autosaved to localStorage so a refresh never loses it, model-answer
+compare, self-check list), `SpeakingPage` (model-answer playback via
+`speechSynthesis`, self-check list — recording/transcript is still a
+later phase, clearly noted on the page).
+
+**Tests**: rewrote the locking tests (no longer applicable) into
+simpler completion tests, and added `dayWiring.test.ts`, which proves
+Day 1's content loads with correct, working Watch/Listen YouTube links
+and reading-site link, and that Day 61/121/180 resolve to the right
+stage and reading-site link even with no content file yet. 25 tests,
+all passing.
+
+---
+
 ## Final check before push (2026-10-11)
 
 A full QA pass was requested before pushing. Honest summary: **this

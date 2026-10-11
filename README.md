@@ -38,14 +38,17 @@ npm run check:content   # Check the day-NNN.json content files for problems
 
 ## The daily mission
 
-Every day has 9 steps, always in this locked order: Warm-up, Watch and
-learn, Grammar, Reading, Vocabulary, Writing, Speaking, Today's Extra,
-End-of-day card. You can't open a later step until the one before it is
-done. "Today's Extra" is optional on weekdays and required on Sundays.
+Every day has 8 tasks, shown as cards in a suggested order (nothing is
+locked — open them in any order): Warm-up, Watch, Grammar, Read,
+Vocabulary, Listen, Write, Speak. Watch/Read/Listen are "link" tasks —
+they open an external site/video and tick once you save a 20+ word note
+about what you learned. The others are "in-app" tasks with their own
+page and a direct checkbox. Once all 8 are done, the day is complete.
 
 The 180 days are split into 3 stages: Foundation (days 1-60), Building
 (days 61-120), and Exam level (days 121-180) — shown everywhere as a
-badge in the header.
+badge in the header, and used to pick the right external reading site
+and video channels for each day.
 
 ## How to add or edit a day's content
 
@@ -82,6 +85,28 @@ check:content` also checks that every URL in it is well-formed.
 The app never hardcodes a specific video URL for "Watch and learn" — it
 builds a YouTube search link from a channel name + topic at runtime
 (see `src/lib/youtube.ts`), so there's nothing to keep updating there.
+
+## Deploying to Vercel
+
+This is a static frontend app, so it deploys as-is, no environment
+variables needed:
+
+1. Push this repo to GitHub (already done for this project).
+2. In Vercel, "Add New Project" → import the GitHub repo. Vercel
+   auto-detects Vite: build command `npm run build`, output directory
+   `dist`.
+3. Deploy.
+
+`vercel.json` in this repo rewrites every path to `index.html`, which
+is required because the app uses client-side routing (React Router) —
+without it, refreshing or sharing a direct link like `/settings` would
+404 on Vercel's static hosting.
+
+**Important**: your data lives in IndexedDB, which is tied to the
+browser + origin you're using. Progress made at `localhost:5173` during
+development will **not** appear on your deployed `*.vercel.app` URL (or
+vice versa) — they're separate origins with separate storage. Once
+you're using the deployed site for real, keep using that same URL.
 
 ## Backing up your data
 

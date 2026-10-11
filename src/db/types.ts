@@ -21,17 +21,17 @@ export interface Settings {
   milestonesSeen: number[]; // streak milestones (7/30/60/...) whose special screen was shown
 }
 
-// The 9 steps of the fixed daily mission, always in this order.
+// The 8 tasks of the daily mission. Suggested order, but not locked -
+// you can open any of them in any order.
 export type StepKey =
   | "warmup"
   | "watch"
   | "grammar"
   | "reading"
   | "vocabulary"
+  | "listen"
   | "writing"
-  | "speaking"
-  | "extra"
-  | "endOfDay";
+  | "speaking";
 
 export type TaskKey =
   | "warmupDone"
@@ -39,12 +39,11 @@ export type TaskKey =
   | "grammarDone"
   | "readingDone"
   | "vocabularyDone"
+  | "listenDone"
   | "writingDone"
-  | "speakingDone"
-  | "extraDone"
-  | "endOfDayDone";
+  | "speakingDone";
 
-// One row per calendar date. Created the first time any step for that
+// One row per calendar date. Created the first time any task for that
 // date is touched.
 export interface DailyProgress {
   date: string; // "YYYY-MM-DD", primary key
@@ -54,9 +53,13 @@ export interface DailyProgress {
   grammarDone: boolean;
   readingDone: boolean;
   vocabularyDone: boolean;
+  listenDone: boolean;
   writingDone: boolean;
   speakingDone: boolean;
-  extraDone: boolean;
-  endOfDayDone: boolean;
-  completedAt?: string; // ISO datetime, set once the day's required steps are done
+  // Short notes typed for the "link" tasks (Watch/Read/Listen), saved for
+  // revision. Ticking those 3 tasks requires >= 20 words here.
+  watchNote?: string;
+  readNote?: string;
+  listenNote?: string;
+  completedAt?: string; // ISO datetime, set once all 8 tasks are done
 }

@@ -1,6 +1,6 @@
 import Dexie, { type Table } from "dexie";
 import type { DailyProgress, Settings, TaskKey } from "./types";
-import { isExtraRequired, todayISO } from "../lib/date";
+import { todayISO } from "../lib/date";
 
 export const SETTINGS_ID = 1;
 
@@ -14,38 +14,48 @@ class English180DB extends Dexie {
       settings: "id",
       dailyProgress: "date, dayNumber",
     });
-    // v1 shipped with a 4-flag dailyProgress shape (vocabDone/writingDone/
-    // speakingDone/reviewDone). v2 moves to the 8-step locked mission.
-    // No real progress data exists from v1 yet, so we just reset the
-    // table shape instead of migrating old rows.
+    // v2: moved from a 4-flag dailyProgress shape to an 8/9-step one.
     this.version(2)
-      .stores({
-        settings: "id",
-        dailyProgress: "date, dayNumber",
-      })
+      .stores({ settings: "id", dailyProgress: "date, dayNumber" })
+      .upgrade((tx) => tx.table("dailyProgress").clear());
+    // v3: removed the locked "extra"/"endOfDay" steps in favour of 8
+    // unlocked tasks (added "listen", dropped "extra" and "endOfDay").
+    this.version(3)
+      .stores({ settings: "id", dailyProgress: "date, dayNumber" })
       .upgrade((tx) => tx.table("dailyProgress").clear());
   }
 }
 
 export const db = new English180DB();
 
-// Makes sure the single settings row exists. Call once on app startup.
+const SETTINGS_DEFAULTS: Settings = {
+  id: SETTINGS_ID,
+  startDate: todayISO(),
+  dailyMinutes: 60,
+  darkMode: false,
+  notificationTime: null,
+  whyReason: null,
+  whyGoal: null,
+  milestonesSeen: [],
+};
+
+// Makes sure the single settings row exists, AND backfills any fields
+// that were added after this row was first created (so an older,
+// partial settings object never crashes code that expects a newer
+// field to exist). Call once on app startup.
 export async function ensureSettings(): Promise<Settings> {
   const existing = await db.settings.get(SETTINGS_ID);
-  if (existing) return existing;
+  if (!existing) {
+    await db.settings.put(SETTINGS_DEFAULTS);
+    return SETTINGS_DEFAULTS;
+  }
 
-  const defaults: Settings = {
-    id: SETTINGS_ID,
-    startDate: todayISO(),
-    dailyMinutes: 60,
-    darkMode: false,
-    notificationTime: null,
-    whyReason: null,
-    whyGoal: null,
-    milestonesSeen: [],
-  };
-  await db.settings.put(defaults);
-  return defaults;
+  const merged: Settings = { ...SETTINGS_DEFAULTS, ...existing };
+  const wasMissingFields = Object.keys(SETTINGS_DEFAULTS).some((key) => !(key in existing));
+  if (wasMissingFields) {
+    await db.settings.put(merged);
+  }
+  return merged;
 }
 
 export async function updateSettings(changes: Partial<Omit<Settings, "id">>): Promise<void> {
@@ -67,27 +77,24 @@ export async function getOrCreateDailyProgress(
     grammarDone: false,
     readingDone: false,
     vocabularyDone: false,
+    listenDone: false,
     writingDone: false,
     speakingDone: false,
-    extraDone: false,
-    endOfDayDone: false,
   };
   await db.dailyProgress.put(fresh);
   return fresh;
 }
 
 function isDayComplete(p: DailyProgress): boolean {
-  const extraOk = p.extraDone || !isExtraRequired(p.date);
   return (
     p.warmupDone &&
     p.watchDone &&
     p.grammarDone &&
     p.readingDone &&
     p.vocabularyDone &&
+    p.listenDone &&
     p.writingDone &&
-    p.speakingDone &&
-    extraOk &&
-    p.endOfDayDone
+    p.speakingDone
   );
 }
 
@@ -99,6 +106,26 @@ export async function setTaskDone(
 ): Promise<DailyProgress> {
   const existing = await getOrCreateDailyProgress(date, dayNumber);
   const updated: DailyProgress = { ...existing, [task]: done };
+  updated.completedAt = isDayComplete(updated) ? new Date().toISOString() : undefined;
+
+  await db.dailyProgress.put(updated);
+  return updated;
+}
+
+// Saves a note for a "link" task (Watch/Read/Listen) and ticks it only
+// once the note is at least 20 words.
+export async function saveTaskNote(
+  date: string,
+  dayNumber: number,
+  noteField: "watchNote" | "readNote" | "listenNote",
+  taskField: "watchDone" | "readingDone" | "listenDone",
+  note: string,
+): Promise<DailyProgress> {
+  const existing = await getOrCreateDailyProgress(date, dayNumber);
+  const wordCount = note.trim().split(/\s+/).filter(Boolean).length;
+  const done = wordCount >= 20;
+
+  const updated: DailyProgress = { ...existing, [noteField]: note, [taskField]: done };
   updated.completedAt = isDayComplete(updated) ? new Date().toISOString() : undefined;
 
   await db.dailyProgress.put(updated);
