@@ -16,6 +16,9 @@ export interface Settings {
   dailyMinutes: number; // how many minutes the user plans to study each day
   darkMode: boolean;
   notificationTime: string | null; // "HH:MM" 24h, or null if reminders are off
+  whyReason: string | null; // "Why I started" — my reason, written on first launch
+  whyGoal: string | null; // "Why I started" — my goal, written on first launch
+  milestonesSeen: number[]; // streak milestones (7/30/60/...) whose special screen was shown
 }
 
 // The 9 steps of the fixed daily mission, always in this order.

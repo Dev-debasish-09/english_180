@@ -8,16 +8,18 @@ interface NavItem {
   stepKey?: StepKey; // if set, this link is locked until that step is reachable today
 }
 
+// Fixed nav order: Today, Grammar, Reading, Vocabulary, Writing, Speaking,
+// Resources, Progress, Settings. "Watch and learn" and the "How to Study"
+// guide are reached from the Home mission card / Settings instead, to
+// keep this bar short on mobile.
 const links: NavItem[] = [
-  { to: "/", label: "Home" },
-  { to: "/watch", label: "Watch", stepKey: "watch" },
+  { to: "/", label: "Today" },
   { to: "/grammar", label: "Grammar", stepKey: "grammar" },
   { to: "/reading", label: "Reading", stepKey: "reading" },
   { to: "/vocabulary", label: "Vocabulary", stepKey: "vocabulary" },
   { to: "/writing", label: "Writing", stepKey: "writing" },
   { to: "/speaking", label: "Speaking", stepKey: "speaking" },
   { to: "/resources", label: "Resources", stepKey: "extra" },
-  { to: "/guide", label: "Guide" },
   { to: "/progress", label: "Progress" },
   { to: "/settings", label: "Settings" },
 ];

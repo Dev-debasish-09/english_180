@@ -1,6 +1,6 @@
 import Dexie, { type Table } from "dexie";
 import type { DailyProgress, Settings, TaskKey } from "./types";
-import { parseISODate, todayISO } from "../lib/date";
+import { isExtraRequired, todayISO } from "../lib/date";
 
 export const SETTINGS_ID = 1;
 
@@ -29,11 +29,6 @@ class English180DB extends Dexie {
 
 export const db = new English180DB();
 
-// Sunday is the only day "Today's Extra" is required; other days it's optional.
-export function isExtraRequired(date: string): boolean {
-  return parseISODate(date).getDay() === 0;
-}
-
 // Makes sure the single settings row exists. Call once on app startup.
 export async function ensureSettings(): Promise<Settings> {
   const existing = await db.settings.get(SETTINGS_ID);
@@ -45,6 +40,9 @@ export async function ensureSettings(): Promise<Settings> {
     dailyMinutes: 60,
     darkMode: false,
     notificationTime: null,
+    whyReason: null,
+    whyGoal: null,
+    milestonesSeen: [],
   };
   await db.settings.put(defaults);
   return defaults;

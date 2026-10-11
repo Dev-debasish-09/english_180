@@ -1,6 +1,6 @@
 import type { DailyProgress, StageId, StepKey, TaskKey } from "../db/types";
 import type { DayContent } from "../content/types";
-import { isExtraRequired } from "../db/db";
+import { isExtraRequired } from "./date";
 
 export interface StepDef {
   key: StepKey;
@@ -129,7 +129,11 @@ export function buildStepStates(date: string, progress: DailyProgress | undefine
     const required = def.key !== "extra" || isExtraRequired(date);
 
     const status: StepStatus = done ? "done" : previousDone ? "active" : "locked";
-    previousDone = done || !required;
+    // Only clears for the next step if this one was actually reachable
+    // (previousDone) AND either done, or not required (skippable). A
+    // locked, non-required step must stay locked — it doesn't un-block
+    // the chain just because it's optional.
+    previousDone = previousDone && (done || !required);
 
     return { ...def, done, required, status };
   });

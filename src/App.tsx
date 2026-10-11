@@ -11,11 +11,11 @@ import { useSettings } from "./hooks/useSettings";
 
 function DarkModeEffect() {
   const settings = useSettings();
+  const darkMode = settings?.darkMode ?? false;
 
   useEffect(() => {
-    if (!settings) return;
-    document.documentElement.classList.toggle("dark", settings.darkMode);
-  }, [settings?.darkMode]);
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
 
   return null;
 }

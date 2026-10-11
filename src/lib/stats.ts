@@ -1,6 +1,5 @@
 import type { DailyProgress, TaskKey } from "../db/types";
-import { isExtraRequired } from "../db/db";
-import { addDays, toISODate, parseISODate } from "./date";
+import { addDays, isExtraRequired, toISODate, parseISODate } from "./date";
 
 const ALL_TASK_FIELDS: TaskKey[] = [
   "warmupDone",

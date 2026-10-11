@@ -32,6 +32,11 @@ export function diffInDays(a: string, b: string): number {
   return Math.round((db - da) / msPerDay);
 }
 
+// Sunday is the only day "Today's Extra" is required; other days it's optional.
+export function isExtraRequired(date: string): boolean {
+  return parseISODate(date).getDay() === 0;
+}
+
 // The 7 dates (Monday to Sunday) of the week containing `reference`.
 export function getWeekDates(reference: string): string[] {
   const d = parseISODate(reference);

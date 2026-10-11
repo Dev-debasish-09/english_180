@@ -1,5 +1,102 @@
 # English180 - Progress
 
+## Final check before push (2026-10-11)
+
+A full QA pass was requested before pushing. Honest summary: **this
+check covers Phase 1 (infra) and the new Motivation features below.
+Most of the detailed content/feature checks requested (180 days of
+content, spaced repetition, quiz scoring, error bank, backup
+export/import) don't apply yet, because Phases 2-6 haven't been built —
+only Phase 1 exists.** See the PASS/FAIL/N/A table at the bottom of this
+file for exactly what was checked and why.
+
+### Arrange
+
+- Nav order fixed to exactly: **Today**, Grammar, Reading, Vocabulary,
+  Writing, Speaking, Resources, Progress, Settings (renamed from
+  "Home", and "Watch" + "Guide" removed from the bar to match this list
+  — both are still reachable: Watch from the Home mission card, Guide
+  from a link on Settings).
+- Daily mission order confirmed as: Warm-up, Watch and learn, Grammar,
+  Reading, Vocabulary, Writing, Speaking, Today's Extra, End-of-day
+  card — already matched, no change needed.
+- Cleaned: no `console.log`, no `TODO`/leftover AI-server/API-key code
+  found (there never was any — the AI/server plan was scrapped before
+  any of it was written).
+- Found and fixed a real bug while writing tests: in the lock-chain
+  logic, a locked-but-skippable step (the weekday "extra") could
+  incorrectly un-block the step after it even while still genuinely
+  locked by an earlier incomplete step. Fixed in `src/lib/steps.ts` and
+  covered by a regression test.
+- Refactored `isExtraRequired` out of `db.ts` (which instantiates
+  Dexie/IndexedDB) into `src/lib/date.ts`, so the pure locking/stats
+  logic has no IndexedDB dependency and can be unit-tested in plain
+  Node.
+
+### Content check script
+
+Added `npm run check:content` (`scripts/checkContent.mjs`). It checks,
+for every `day-NNN.json` that exists: all required sections present and
+non-empty, no placeholder text, exactly one correct answer + explanation
+per grammar exercise and reading question, every vocabulary word has
+English/Hindi/Odia meanings + 2 examples, no word repeated as "new" on
+two different days, passage length matches the stage's word-count
+range, and (once `resources.json` exists) every link is a syntactically
+valid URL. Run today: **0 of 180 day files exist yet** (expected — no
+content has been authored; that's Phase 2/6). The script correctly
+reports this instead of failing silently.
+
+### Motivation features added
+
+- **Daily mentor message** on Home: one message per day, stage-matched
+  (habit-forming for Foundation, pushing through the middle for
+  Building, exam confidence for Exam), English + Hindi
+  (`src/content/mentorMessages.ts`). Built from hand-written messages
+  for the key/round-number days plus hand-written stage-specific
+  templates (the day number is always filled in), rather than 180 fully
+  independent sentences — flagging that honestly rather than overstating
+  it.
+- **"Why I started"**: required on first use (Home won't show the
+  mission until it's answered), editable later from Settings, shown
+  again on the day you come back after missing one.
+- **Streak milestones** at 7/30/60/90/120/150/180, each with a
+  dedicated full-screen "what you can now do" message, shown once
+  (tracked in `settings.milestonesSeen`).
+- **Missed-day comeback message**: calm, rotates through a small set of
+  non-guilt messages, shown with your saved reason/goal underneath.
+  *Not yet built*: an actual shortened catch-up mission — there's no
+  real task content yet to shorten (Phase 2+).
+  - **End-of-day "one thing I did well"**: picks the highest-effort step
+  you finished today (Speaking > Writing > Reading > Grammar >
+  Vocabulary > Watch > Warm-up) and shows an honest, specific line about
+  it. *Not score-based yet* — real scores need the Grammar/Writing/
+  Speaking modules (Phase 2-4).
+- **"Then and now" (every 30 days, first vs. latest writing/recording):
+  not built.** This needs real Writing and Speaking submissions, which
+  don't exist yet (Phase 3/4). Deferred, not faked.
+
+### Automated tests
+
+Added `vitest` (`npm run test`). 24 tests across 4 files, all passing:
+day-number/stage math, the full lock-chain (including the bug above),
+streak calculation, missed-day counting, milestone firing-once, and
+that all 180 mentor messages are non-empty and textually distinct.
+*Not tested* (because they don't exist): spaced repetition, quiz
+scoring/70% rule, error bank 3/7-day return, backup export/import.
+
+### Manual/browser checks — limitation
+
+Claude in Chrome / browser automation tools weren't available in this
+session, so the full day walkthrough and the Day 1/61/121/180
+simulation were verified through the automated unit tests above (which
+directly encode that logic) rather than by clicking through the app in
+a real browser. Mobile width (360px) and dark mode were verified by
+code review of the Tailwind classes (mobile-first, `sm:` breakpoints,
+`dark:` variants throughout) rather than a live screenshot. Flagging
+this rather than claiming a visual check that didn't happen.
+
+---
+
 ## Big change #3 (2026-10-11): "Watch and learn" + real learning resources
 
 Adds one new daily step and a real map of free external resources, matched
@@ -223,7 +320,6 @@ What was built:
   (saved now; the notification itself is wired up in Phase 5).
 
 Not done yet (later phases):
-- No git repo (user chose to skip git).
 - Real grammar/reading/vocabulary/writing/speaking/watch-and-learn
   content — module pages (including `/watch`) are stub pages with a
   "mark done" demo button.
@@ -236,6 +332,45 @@ Not done yet (later phases):
 
 ---
 
-**Current status: Phase 1 (including the Watch-and-learn + Guide page
-additions) is done and running. Next: Phase 2 — Grammar + Vocabulary +
-Error bank + Watch-and-learn's real page, with content for days 1-30.**
+## Final check results
+
+| # | Check | Result |
+|---|---|---|
+| 1 | PROGRESS.md reviewed, gaps listed | PASS |
+| 1 | Dead code / console.log / leftover AI-server code removed | PASS (none found) |
+| 1 | Nav order matches Today/Grammar/Reading/Vocabulary/Writing/Speaking/Resources/Progress/Settings | PASS |
+| 1 | Daily mission order matches Warm-up/Watch/Grammar/Reading/Vocabulary/Writing/Speaking/Extra/End-of-day | PASS |
+| 2 | `npm run check:content` exists and reports accurately | PASS (0/180 days exist — correctly reported, not hidden) |
+| 2 | All 180 day files present | N/A — not written yet (Phase 2/6) |
+| 2 | Day 1/30/60/90/120/150/180 difficulty reviewed | N/A — no day content exists to review |
+| 3 | Daily mentor message (180, stage-matched, English+Hindi) | PASS (template-based with real variety; see note above) |
+| 3 | "Why I started" (first-launch, shown on missed day) | PASS |
+| 3 | Streak milestones (7/30/60/90/120/150/180) | PASS |
+| 3 | "Then and now" (writing/recording comparison) | N/A — needs Writing/Speaking submissions (Phase 3/4) |
+| 3 | Missed-day comeback message | PASS (message only; shortened mission needs real content) |
+| 3 | End-of-day "one thing I did well" | PASS (heuristic; not score-based yet) |
+| 4 | `npm run build` | PASS |
+| 4 | TypeScript errors | PASS (none) |
+| 4 | Lint errors | PASS (none) |
+| 4 | Tests: day/stage calc, task locking | PASS (found and fixed a real locking bug) |
+| 4 | Tests: SM-2 dates, quiz scoring/70%, error bank 3/7-day, backup export/import | N/A — none of these exist yet |
+| 4 | Full-day walkthrough, Day 1/61/121/180 simulation | PASS via unit tests (no browser automation available this session) |
+| 4 | Mobile width 360px, dark mode | PASS via code review (no live screenshot taken) |
+| 4 | Works offline except external links | PASS (zero `fetch`/network calls in app code, confirmed by search) |
+| 4 | Refresh mid-task doesn't lose work | PASS (all progress/settings writes are immediate, not buffered) |
+| 5 | `.gitignore` covers `node_modules`/`dist`/`.env`; no secrets in code or git history | PASS |
+| 5 | README updated (what/how to run/how to edit content & resources/backup) | PASS |
+| 5 | Clear commit | PASS (pending — see below) |
+
+**Not "Ready to push" in the full sense your checklist describes**,
+because most of the content and later-phase features it checks for
+don't exist yet — that's expected at this point in the build (Phase 1
++ Motivation), not a defect. Everything that *does* exist passes.
+
+This is also not a brand-new GitHub repo — `english_180` was already
+created and pushed to earlier in this project. The commands below just
+push this update to it.
+
+**Current status: Phase 1 + Motivation features are done, tested, and
+clean. Next: Phase 2 — Grammar + Vocabulary + Error bank + Watch-and-
+learn's real page, with content for days 1-30.**
